@@ -42,6 +42,7 @@ export default function OurProducts() {
           spaceBetween={24}
           slidesPerView={2}
           breakpoints={{
+            0: { slidesPerView: 3 },
             640: { slidesPerView: 3 },
             1024: { slidesPerView: 6 },
           }}

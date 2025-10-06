@@ -147,8 +147,8 @@ const Header = () => {
 
         {/* Mobile View */}
         <div className="lg:hidden relative">
-          <button onClick={toggleMenu}>
-            {!isMenuOpen && <AlignRight size={30} color={"#1EB7B1"} />}
+          <button onClick={toggleMenu} className="text-primary">
+            {!isMenuOpen && <AlignRight size={30} />}
           </button>
 
           <AnimatePresence>
@@ -170,8 +170,8 @@ const Header = () => {
                       alt="logo"
                     />
                   </a>
-                  <button onClick={closeMenu}>
-                    <IoCloseSharp size={30} color={"#1EB7B1"} />
+                  <button onClick={closeMenu} className="text-primary">
+                    <IoCloseSharp size={30}  />
                   </button>
                 </div>
                 <hr className="mb-6 text-primary" />
