@@ -112,7 +112,7 @@ export default function HeroSlider() {
         </div>
 
         {/* Caption Preview */}
-        <div className="flex  items-center justify-between sm:w-[400px] bg-gradient-to-r to-primary-light from-gray-100 p-3 sm:p-4 shadow-md">
+        <div className="flex  items-center justify-between sm:w-[400px] bg-gradient-to-r to-primary-light from-gray-100 p-3 sm:p-4">
           <div className=" mb-2 sm:mb-0">
             <span className="text-primary font-bold text-base sm:text-lg">
               0{activeIndex + 1}.

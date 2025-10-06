@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <div className="sticky top-0 z-50 w-full bg-white font-inter font-normal text-[16px] shadow-md ">
       {/* Top Bar */}
-      <div className="bg-gradient-to-r from-primary to-gray-100  transition hidden sm:flex justify-center lg:justify-between items-center h-12 px-5 xl:px-40  ">
+      <div className="bg-gradient-to-r from-primary to-gray-100 px-6 lg:px-16 xl:px-14 transition hidden sm:flex justify-center lg:justify-between items-center h-12">
         <div className="flex items-center text-dark-2 space-x-4">
           <span>
             <FiPhone />
@@ -61,7 +61,7 @@ const Header = () => {
             onClick={() => copyToClipboard("info@safecareind.xyz")}
             className="cursor-pointer hover:underline underline-offset-4"
           >
-            info@safecareind.xyz
+            info@binali.xyz
           </span>
         </div>
 
@@ -87,7 +87,7 @@ const Header = () => {
       </div>
 
       {/* Navbar */}
-      <div className="flex justify-between items-center px-5 xl:mx-40 h-20 bg-white">
+      <div className="flex justify-between items-center px-6 lg:px-16 xl:px-14 h-20 bg-white">
         <div className="flex-shrink-0">
           <a href="/">
             <Image
@@ -109,9 +109,6 @@ const Header = () => {
                 <a href="#home" className="hover:text-primary">
                   Home
                 </a>
-                <div>
-                  <span>/</span>
-                </div>
               </div>
             </li>
             <li>
@@ -119,41 +116,29 @@ const Header = () => {
                 <a href="#about" className="hover:text-primary">
                   About Us
                 </a>
-                <div>
-                  <span>/</span>
-                </div>
               </div>
             </li>
             <li className="flex items-center space-x-4">
               <MegaMenu />
-              <div>
-                <span>/</span>
+            </li>
+            <li>
+              <div className="flex items-center space-x-4">
+                <a href="#ourproducts" className="hover:text-primary">
+                  Our Products
+                </a>
               </div>
             </li>
             <li>
               <div className="flex items-center space-x-4">
-                <a href="#quality" className="hover:text-primary">
-                  Quality
+                <a href="#gallery" className="hover:text-primary">
+                  Gallery
                 </a>
-                <div>
-                  <span>/</span>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className="flex items-center space-x-4">
-                <a href="#services" className="hover:text-primary">
-                  Services
-                </a>
-                <div>
-                  <span>/</span>
-                </div>
               </div>
             </li>
             <li>
               <div className="">
-                <a href="#gallery" className="hover:text-primary">
-                  Gallery
+                <a href="#contact" className="hover:text-primary">
+                  Contact
                 </a>
               </div>
             </li>
