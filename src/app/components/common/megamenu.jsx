@@ -181,8 +181,13 @@ const MegaMenu = ({ setIsMegaMenuOpen }) => {
                   <p className="text-gray-600 text-sm">
                     Looking for a specific product or service?
                   </p>
-                  <button 
-                    className="px-6 py-2 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors font-medium"
+                  <button
+                      className="bg-gradient-to-r from-primary to-primary-light 
+                    cursor-pointer text-white font-semibold py-2 px-6 rounded-xl 
+                    transition-all duration-300 disabled:opacity-60 
+                    disabled:cursor-not-allowed hover:scale-105 active:scale-95 mt-6 
+                    sm:px-6 sm:py-3 bg-primary hover:bg-primary-light text-sm sm:text-base w-full 
+                    sm:w-auto text-center"
                     onClick={() => {
                       setOpen(false);
                       setIsMegaMenuOpen(false);
