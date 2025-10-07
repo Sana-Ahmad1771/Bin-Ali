@@ -84,10 +84,10 @@ export default function ValuesPrinciples() {
             transition={{ duration: 0.45, delay: index * 0.06 }}
             viewport={{ once: true }}
             whileHover={{ translateY: -6 }}
-            className="relative rounded-tl-[3rem] rounded-tr-2xl rounded-b-2xl overflow-visible shadow-lg hover:shadow-2xl transition-all duration-300 bg-white flex flex-col h-full"
+            className="relative rounded-tl-[5rem] bg-primary-light/50 rounded-tr-3xl rounded-b-2xl overflow-visible shadow-lg hover:shadow-2xl transition-all duration-300  flex flex-col h-full"
           >
             {/* top pale area */}
-            <div className="bg-[#EAF2FF] rounded-tr-2xl p-5 sm:p-6 md:p-8 flex-1 flex flex-col relative">
+            <div className=" rounded-tr-2xl p-5 sm:p-6 md:p-8 flex-1 flex flex-col relative">
               {/* icon badge overlapping top-left corner */}
               <div className="absolute -top-6 -left-6 w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md">
                 <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
