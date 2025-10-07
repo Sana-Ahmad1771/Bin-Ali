@@ -104,12 +104,12 @@ const Header = () => {
         {/* Desktop Nav */}
         <div className="hidden lg:block text-dark-2">
           <ul className="flex justify-center items-center space-x-5 list-none">
-              <li>
+            <li>
               <Link href="/" className="hover:text-primary">
                 Home
               </Link>
             </li>
-             <li>
+            <li>
               <Link href="/about" className="hover:text-primary">
                 About Us
               </Link>
@@ -117,7 +117,7 @@ const Header = () => {
             <li className="flex items-center space-x-4">
               <MegaMenu />
             </li>
-             <li>
+            <li>
               <Link href="/Products" className="hover:text-primary">
                 Our Products
               </Link>
@@ -161,7 +161,7 @@ const Header = () => {
                     />
                   </a>
                   <button onClick={closeMenu} className="text-primary">
-                    <IoCloseSharp size={30}  />
+                    <IoCloseSharp size={30} />
                   </button>
                 </div>
                 <hr className="mb-6 text-primary" />
@@ -182,13 +182,13 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/products" className="hover:text-primary">
-                      Products
+                    <Link href="/Products" className="hover:text-primary">
+                      Our Products
                     </Link>
                   </li>
                   <li>
-                    <Link href="/gallery" className="hover:text-primary">
-                      Gallery
+                    <Link href="/career" className="hover:text-primary">
+                      Career
                     </Link>
                   </li>
                   <li>
