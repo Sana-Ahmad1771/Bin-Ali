@@ -22,7 +22,7 @@ export const AboutUs = () => {
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="lg:text-[44px] text-4xl font-medium "
+            className="lg:text-[44px] text-4xl font-bold"
           >
             About Us
           </motion.h1>

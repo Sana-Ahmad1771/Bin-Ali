@@ -105,12 +105,12 @@ const Header = () => {
         <div className="hidden lg:block text-dark-2">
           <ul className="flex justify-center items-center space-x-5 list-none">
               <li>
-              <Link href="/" className="hover:text-[#1E3D69]">
+              <Link href="/" className="hover:text-primary">
                 Home
               </Link>
             </li>
              <li>
-              <Link href="/about" className="hover:text-[#1E3D69]">
+              <Link href="/about" className="hover:text-primary">
                 About Us
               </Link>
             </li>
@@ -118,23 +118,19 @@ const Header = () => {
               <MegaMenu />
             </li>
              <li>
-              <Link href="/Products" className="hover:text-[#1E3D69]">
+              <Link href="/Products" className="hover:text-primary">
                 Our Products
               </Link>
             </li>
             <li>
-              <div className="flex items-center space-x-4">
-                <a href="#gallery" className="hover:text-primary">
-                  Gallery
-                </a>
-              </div>
+              <Link href="/career" className="hover:text-primary">
+                Career
+              </Link>
             </li>
             <li>
-              <div className="">
-                <a href="#contact" className="hover:text-primary">
-                  Contact
-                </a>
-              </div>
+              <Link href="/contact" className="hover:text-primary">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

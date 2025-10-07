@@ -71,15 +71,22 @@ export default function HeroSlider() {
               <div className="relative z-10 w-full">
                 <div className="max-w-7xl mx-auto px-5">
                   <div className="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
-                  <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase leading-tight">
-                  {slide.title}
-                </h1>
-                  <p className="text-white/90 mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
-                  {slide.desc}
-                </p>
-                  <button className="mt-6 px-5 py-2 sm:px-6 sm:py-3 bg-primary hover:bg-primary-light text-white rounded-md shadow-md transition text-sm sm:text-base w-full sm:w-auto text-center">
-                  MORE ABOUT US
-                </button>
+                    <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase leading-tight">
+                      {slide.title}
+                    </h1>
+                    <p className="text-white/90 mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
+                      {slide.desc}
+                    </p>
+                    <button
+                      className="bg-gradient-to-r from-primary to-primary-light 
+                    cursor-pointer text-white font-semibold py-2 px-6 rounded-xl 
+                    transition-all duration-300 disabled:opacity-60 
+                    disabled:cursor-not-allowed hover:scale-105 active:scale-95 mt-6 
+                    sm:px-6 sm:py-3 bg-primary hover:bg-primary-light text-sm sm:text-base w-full 
+                    sm:w-auto text-center"
+                    >
+                      MORE ABOUT US
+                    </button>
                   </div>
                 </div>
               </div>
