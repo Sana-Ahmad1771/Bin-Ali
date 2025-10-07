@@ -6,7 +6,7 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-
+import Image from "next/image";
 const slides = [
   {
     id: 1,
@@ -35,7 +35,10 @@ export default function HeroSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="relative w-full h-screen">
+    <section
+      className="relative w-full overflow-hidden"
+      style={{ minHeight: "calc(100vh - 120px)", height: "auto" }}
+    >
       <Swiper
         modules={[Autoplay, Navigation, EffectFade]}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -52,7 +55,7 @@ export default function HeroSlider() {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative w-full h-screen flex items-center overflow-hidden">
+            <div className="relative w-full h-[calc(100vh-120px)] flex items-center overflow-hidden">
               {/* Background with zoom animation */}
               <div
                 className={`absolute inset-0 bg-cover bg-center transition-transform duration-[5000ms] ${
@@ -65,16 +68,20 @@ export default function HeroSlider() {
               <div className="absolute inset-0 bg-primary/30"></div>
 
               {/* Content */}
-              <div className="relative z-10 max-w-3xl px-4 sm:px-6 md:px-12">
-                <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
+              <div className="relative z-10 w-full">
+                <div className="max-w-7xl mx-auto px-5">
+                  <div className="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+                  <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase leading-tight">
                   {slide.title}
                 </h1>
-                <p className="text-white/90 mt-4 text-base sm:text-lg md:text-xl">
+                  <p className="text-white/90 mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
                   {slide.desc}
                 </p>
-                <button className="mt-6 px-5 py-2 sm:px-6 sm:py-3 bg-primary hover:bg-primary-light text-white rounded-md shadow-md transition text-sm sm:text-base">
+                  <button className="mt-6 px-5 py-2 sm:px-6 sm:py-3 bg-primary hover:bg-primary-light text-white rounded-md shadow-md transition text-sm sm:text-base w-full sm:w-auto text-center">
                   MORE ABOUT US
                 </button>
+                  </div>
+                </div>
               </div>
             </div>
           </SwiperSlide>
@@ -98,7 +105,6 @@ export default function HeroSlider() {
           </div>
         ))}
       </div>
-
       {/* Bottom Preview + Navigation */}
       <div className="absolute right-0 bottom-0 z-20 w-[90%] sm:w-auto">
         {/* Arrows */}

@@ -104,29 +104,23 @@ const Header = () => {
         {/* Desktop Nav */}
         <div className="hidden lg:block text-dark-2">
           <ul className="flex justify-center items-center space-x-5 list-none">
-            <li>
-              <div className="flex items-center space-x-4">
-                <a href="#home" className="hover:text-primary">
-                  Home
-                </a>
-              </div>
+              <li>
+              <Link href="/" className="hover:text-[#1E3D69]">
+                Home
+              </Link>
             </li>
-            <li>
-              <div className="flex items-center space-x-4 ">
-                <a href="#about" className="hover:text-primary">
-                  About Us
-                </a>
-              </div>
+             <li>
+              <Link href="/about" className="hover:text-[#1E3D69]">
+                About Us
+              </Link>
             </li>
             <li className="flex items-center space-x-4">
               <MegaMenu />
             </li>
-            <li>
-              <div className="flex items-center space-x-4">
-                <a href="#ourproducts" className="hover:text-primary">
-                  Our Products
-                </a>
-              </div>
+             <li>
+              <Link href="/Products" className="hover:text-[#1E3D69]">
+                Our Products
+              </Link>
             </li>
             <li>
               <div className="flex items-center space-x-4">

@@ -4,52 +4,55 @@ import { FaCheckCircle, FaPhoneAlt } from "react-icons/fa";
 
 export default function WelcomeSection() {
   return (
-    <section className="relative bg-gray-9 py-20 px-6 lg:px-16 xl:px-28">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16">
+    <section className="relative overflow-hidden bg-gray-9 py-20 px-6 lg:px-16 xl:px-28">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
         {/* Left Side - Images */}
-        <div className="relative flex-1 flex justify-center items-center z-30">
+        <div className="relative w-full lg:flex-1 flex justify-center items-center z-30">
           {/* shape right */}
-          <div className="absolute right-0 top-14 -translate-y-1/2 z-10 animate-bounce-smooth">
-            <img src="/shape.png" alt="" className="h-full w-auto" />
+          <div className="absolute right-0 top-10 -translate-y-1/2 z-10 animate-bounce-smooth">
+            <Image
+            width={420}
+            height={420}
+            src="/shape.png" alt="" className="h-12 sm:h-20 w-auto rounded-md" />
           </div>
 
           {/* Back Image */}
-          <div className="rounded-xl overflow-hidden shadow-lg relative z-20">
+          <div className="rounded-xl overflow-hidden shadow-lg relative z-20 w-[260px] sm:w-[340px] md:w-[420px]">
             <Image
               src="/doc-1.png"
               alt="Medical team"
-              width={400}
-              height={400}
-              className="rounded-xl object-cover"
+              width={420}
+              height={420}
+              className="rounded-xl object-cover w-full h-auto"
             />
           </div>
 
-          {/* Front Image */}
-          <div className="absolute z-30 -bottom-10 -right-10 bg-white rounded-2xl shadow-xl p-2">
+          {/* Front Image - overlapping on all screens, scaled/positioned responsively */}
+          <div className="absolute z-30 -bottom-6 -right-4 md:-bottom-10 md:-right-10 bg-white rounded-2xl shadow-xl p-2">
             <Image
               src="/doc-2.png"
               alt="Doctor"
               width={280}
               height={280}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover w-[160px] sm:w-[200px] md:w-[260px] lg:w-[280px] h-auto"
             />
           </div>
         </div>
 
         {/* Right Side - Text */}
-        <div className="flex-1">
+        <div className="w-full lg:flex-1">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">
             About Bin Ali Medical Supplies LLC
           </p>
 
-          <h2 className="text-dark-2 text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Welcome to{" "}
+          <h2 className="text-dark-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+            Welcome to {" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">
               Bin Ali Medical Supplies LLC
             </span>
           </h2>
 
-          <p className="text-dark-5 leading-relaxed mb-8">
+          <p className="text-dark-5 leading-relaxed mb-6 text-sm sm:text-base md:text-lg">
             Being the leading supplier of healthcare products in the region, Bin
             Ali Medical Supplies LLC deals with an extensive range of high-value
             products for the benefit of our loyal customer base. Surgical
@@ -61,29 +64,8 @@ export default function WelcomeSection() {
             Furniture, and Equipment — so goes the list.
           </p>
 
-          {/* Bullet Points
-          <div className="grid grid-cols-2 gap-y-4 mb-10">
-            {[
-              "Market Share",
-              "Financial Position",
-              "Customer loyalty",
-              "Production/Distribution capacity",
-              "Global/regional expansion",
-              "Inventory System",
-              "Product Quality",
-              "Organizational structure",
-              "Customer Service",
-              "Management Expertise",
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <FaCheckCircle className="text-primary text-lg flex-shrink-0" />
-                <span className="text-dark-4 text-base">{item}</span>
-              </div>
-            ))}
-          </div> */}
-
           {/* CEO Info */}
-          <div className="flex items-center gap-6 border-t border-gray-4 pt-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 border-t border-gray-4 pt-6">
             <div className="flex items-center gap-3">
               <Image
                 src="/doc-7.png"
@@ -93,12 +75,8 @@ export default function WelcomeSection() {
                 className="rounded-full object-cover"
               />
               <div>
-                <p className="text-dark-2 font-semibold leading-tight">
-                  Omar Ali
-                </p>
-                <p className="text-gray text-sm">
-                  CEO, Bin Ali Medical Supplies
-                </p>
+                <p className="text-dark-2 font-semibold leading-tight">Omar Ali</p>
+                <p className="text-gray text-sm">CEO, Bin Ali Medical Supplies</p>
               </div>
             </div>
 
@@ -107,9 +85,7 @@ export default function WelcomeSection() {
                 <FaPhoneAlt />
               </div>
               <div>
-                <p className="text-dark-2 font-semibold leading-tight">
-                  +971-4-XXX-XXXX
-                </p>
+                <p className="text-dark-2 font-semibold leading-tight">+971-4-XXX-XXXX</p>
                 <p className="text-gray text-sm">Contact Us Anytime</p>
               </div>
             </div>

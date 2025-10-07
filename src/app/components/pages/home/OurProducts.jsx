@@ -9,7 +9,7 @@ export default function OurProducts() {
   return (
     <section
       id="products"
-      className="relative bg-primary/20  py-20 px-6 lg:px-16 xl:px-28 overflow-hidden"
+      className="relative bg-primary/20 py-20 px-6 lg:px-16 xl:px-28 overflow-hidden"
     >
       {/* Section Heading */}
       <div className="max-w-7xl mx-auto text-center mb-8">
@@ -22,33 +22,39 @@ export default function OurProducts() {
           Our Products
         </motion.p>
         <motion.h2
-          className="text-dark-2 text-3xl md:text-4xl font-bold leading-tight mb-2"
+          className="text-dark-2 text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-2"
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.12 }}
         >
-          BAMS offers a wide range of <span className="text-primary"> <br />high-quality products</span>
+          BAMS offers a wide range of
+          <span className="text-primary block">high-quality products</span>
         </motion.h2>
         <p className="text-dark-5 max-w-2xl mx-auto">
           We distribute world-class healthcare and medical equipment across the UAE market.
         </p>
       </div>
 
-      {/* Sliding logos/images with title below - keeps layout */}
-      <div className="max-w-7xl mx-auto">
+  {/* Sliding logos/images with title below - keeps layout */}
+  <div className="max-w-7xl mx-auto">
         <Swiper
           modules={[Autoplay]}
           autoplay={{ delay: 2200, disableOnInteraction: false, pauseOnMouseEnter: true }}
-          spaceBetween={24}
-          slidesPerView={2}
-          breakpoints={{
-            0: { slidesPerView: 3 },
-            640: { slidesPerView: 3 },
-            1024: { slidesPerView: 6 },
-          }}
           loop={true}
           grabCursor={true}
           className="py-6"
+          breakpoints={{
+            // Mobile: show 3 logos
+            320: { slidesPerView: 3, spaceBetween: 12 },
+            480: { slidesPerView: 4, spaceBetween: 12 },
+            // Small tablet / landscape phones: 4
+            640: { slidesPerView: 4, spaceBetween: 16 },
+            768: { slidesPerView: 5, spaceBetween: 18 },
+            // Desktop: increase logos per view
+            1024: { slidesPerView: 5, spaceBetween: 20 },
+            1280: { slidesPerView: 6, spaceBetween: 24 },
+            1600: { slidesPerView: 7, spaceBetween: 28 },
+          }}
         >
           {[
             { title: "Anika", img: "/anika.png" },
@@ -58,18 +64,19 @@ export default function OurProducts() {
             { title: "Darco", img: "/darco.png" },
             { title: "Metrex", img: "/metrex.png" },
             { title: "HerniaMesh", img: "/herniamesh.png" },
+            { title: "Barray", img: "/barray.png" },
           ].map((item, idx) => (
             <SwiperSlide key={idx}>
               <motion.div
-                className="flex flex-col items-center justify-start text-center p-4"
+                className="flex flex-col items-center justify-start text-center p-3 sm:p-4"
                 whileHover={{ translateY: -6 }}
                 transition={{ duration: 0.25 }}
               >
-                <div className="w-28 h-20 md:w-32 md:h-24 flex items-center justify-center bg-white rounded-lg shadow-sm">
-                  <Image src={item.img} alt={item.title} width={140} height={80} className="object-contain" />
+                <div className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 lg:w-32 lg:h-28 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
+                  <Image src={item.img} alt={item.title} width={160} height={80} className="object-contain w-full h-auto" />
                 </div>
-                <div className="mt-3">
-                  <h4 className="text-sm md:text-base font-medium text-dark-2">{item.title}</h4>
+                <div className="mt-2 sm:mt-3">
+                  <h4 className="text-xs sm:text-sm md:text-base font-medium text-dark-2 truncate max-w-[120px] sm:max-w-[160px] md:max-w-[220px]">{item.title}</h4>
                 </div>
               </motion.div>
             </SwiperSlide>

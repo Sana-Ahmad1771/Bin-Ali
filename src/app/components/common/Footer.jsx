@@ -27,7 +27,7 @@ const Footer = () => {
       className="w-full  bg-white font-inter border-t border-gray-200 overflow-hidden text-[#333] text-[16px] leading-normal "
     >
       {/* Main Content */}
-      <div className="py-8 px-6 lg:px-16 xl:px-14 flex flex-col lg:flex-row justify-between flex-wrap gap-12 lg:container lg:mx-auto">
+      <div className="py-8 px-6 lg:px-16 xl:px-14 flex flex-col lg:flex-row justify-between flex-wrap gap-12">
         {/* Logo + Contact */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
