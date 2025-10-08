@@ -13,7 +13,7 @@ export const AboutUs = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="bg-cover bg-no-repeat bg-center min-h-[60vh] 2xl:min-h-[65vh] lg:min-h-[100vh] flex flex-col justify-center items-center 2xl:items-center 2xl:justify-start 2xl:pt-44  text-dark-2 relative z-20 px-5 overflow-hidden"
+        className="bg-cover bg-no-repeat bg-center min-h-[50vh] 2xl:min-h-[55vh] lg:min-h-[100vh] flex flex-col justify-center items-center 2xl:items-center 2xl:justify-start 2xl:pt-44  text-dark-2 relative z-20 px-5 overflow-hidden"
         style={{ backgroundImage: `url(${aboutbg.src})` }}
       >
         <div className="absolute z-10 inset-0 bg-primary/30"></div>

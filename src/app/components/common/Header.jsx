@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../../../../public/logo-svg-binali.svg";
 import { FiPhone } from "react-icons/fi";
@@ -17,6 +18,7 @@ import MegaMenu from "./megamenu";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -32,17 +34,28 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
-  // ✅ Fixed JS version
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 3000);
   };
 
+  // ✅ Fixed nav item class with proper after pseudo-element
+  const navItemClass = (path) =>
+    `relative py-2 transition-all duration-300 group
+    hover:text-primary 
+    ${pathname === path ? "text-primary" : "text-dark-2"}`;
+
+  const navItemBorderClass = (path) =>
+    `absolute left-0 bottom-0 w-full h-0.5 rounded-t-md transition-all duration-300
+    ${
+      pathname === path ? "bg-primary" : "bg-transparent group-hover:bg-primary"
+    }`;
+
   return (
-    <div className="sticky top-0 z-50 w-full bg-white font-inter font-normal text-[16px] shadow-md ">
+    <div className="sticky top-0 z-50 w-full bg-white font-inter font-normal text-[16px] shadow-md">
       {/* Top Bar */}
-      <div className="bg-gradient-to-r from-primary to-gray-100 px-6 lg:px-16 xl:px-14 transition hidden sm:flex justify-center lg:justify-between items-center h-12">
+      <div className="bg-gradient-to-r from-primary to-gray-100 px-6 lg:px-16 xl:px-14 hidden sm:flex justify-center lg:justify-between items-center h-12">
         <div className="flex items-center text-dark-2 space-x-4">
           <span>
             <FiPhone />
@@ -58,7 +71,7 @@ const Header = () => {
             <MdOutlineEmail />
           </span>
           <span
-            onClick={() => copyToClipboard("info@safecareind.xyz")}
+            onClick={() => copyToClipboard("info@binali.xyz")}
             className="cursor-pointer hover:underline underline-offset-4"
           >
             info@binali.xyz
@@ -71,65 +84,80 @@ const Header = () => {
             <RiFacebookFill size={20} />
           </a>
           <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
-          <a href="#twitter" className="hover:scale-125 ">
+          <a href="#twitter" className="hover:scale-125">
             <FaXTwitter size={20} />
           </a>
           <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
-          <a href="#instagram" className="hover:scale-125 ">
+          <a href="#instagram" className="hover:scale-125">
             <LuInstagram size={20} />
           </a>
           <div className="w-[1.5px] h-12 bg-gray-2/80"></div>
-          <a href="#linkedin" className="hover:scale-125 ">
+          <a href="#linkedin" className="hover:scale-125">
             <RxLinkedinLogo size={20} />
           </a>
-          <div className="w-[1.5px] h-12 bg-gray-2/20"></div>
         </div>
       </div>
 
       {/* Navbar */}
       <div className="flex justify-between items-center px-6 lg:px-16 xl:px-14 h-20 bg-white">
+        {/* Logo */}
         <div className="flex-shrink-0">
-          <a href="/">
+          <Link href="/">
             <Image
               src={Logo}
-              alt="safecare-logo"
+              alt="binali-logo"
               width={120}
               height={40}
               className="w-32 h-auto"
               priority
             />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:block text-dark-2">
-          <ul className="flex justify-center items-center space-x-5 list-none">
-            <li>
-              <Link href="/" className="hover:text-primary">
+        <div className="hidden lg:block">
+          <ul className="flex justify-center items-center space-x-8 list-none">
+            <li className="relative">
+              <Link href="/" className={navItemClass("/")}>
                 Home
+                <span className={navItemBorderClass("/")}></span>
               </Link>
             </li>
-            <li>
-              <Link href="/about" className="hover:text-primary">
+            <li className="relative">
+              <Link href="/about" className={navItemClass("/about")}>
                 About Us
+                <span className={navItemBorderClass("/about")}></span>
               </Link>
             </li>
-            <li className="flex items-center space-x-4">
-              <MegaMenu />
+            <li className="relative flex items-center group">
+              <div className="relative">
+                <MegaMenu />
+                {/* Border for MegaMenu - shows on hover and when any service page is active */}
+                <span
+                  className={`absolute left-0 bottom-0 w-full h-0.5 rounded-t-md transition-all duration-300 ${
+                    pathname.startsWith("/services")
+                      ? "bg-primary"
+                      : "bg-transparent group-hover:bg-primary"
+                  }`}
+                ></span>
+              </div>
             </li>
-            <li>
-              <Link href="/Products" className="hover:text-primary">
+            <li className="relative">
+              <Link href="/products" className={navItemClass("/products")}>
                 Our Products
+                <span className={navItemBorderClass("/products")}></span>
               </Link>
             </li>
-            <li>
-              <Link href="/career" className="hover:text-primary">
+            <li className="relative">
+              <Link href="/career" className={navItemClass("/career")}>
                 Career
+                <span className={navItemBorderClass("/career")}></span>
               </Link>
             </li>
-            <li>
-              <Link href="/contact" className="hover:text-primary">
+            <li className="relative">
+              <Link href="/contact" className={navItemClass("/contact")}>
                 Contact
+                <span className={navItemBorderClass("/contact")}></span>
               </Link>
             </li>
           </ul>
@@ -151,7 +179,7 @@ const Header = () => {
                 className="fixed inset-0 bg-white z-50 px-6 sm:pt-20"
               >
                 <div className="flex justify-between items-center my-5">
-                  <a href="/">
+                  <Link href="/" onClick={closeMenu}>
                     <Image
                       src={Logo}
                       width={120}
@@ -159,43 +187,41 @@ const Header = () => {
                       priority
                       alt="logo"
                     />
-                  </a>
+                  </Link>
                   <button onClick={closeMenu} className="text-primary">
                     <IoCloseSharp size={30} />
                   </button>
                 </div>
                 <hr className="mb-6 text-primary" />
                 <div className="flex flex-col text-[20px] space-y-6 px-2 list-none">
-                  <li>
-                    <Link href="/" className="hover:text-primary">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about" className="hover:text-primary">
-                      About Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about" className="hover:text-primary">
-                      Our Brands
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/Products" className="hover:text-primary">
-                      Our Products
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/career" className="hover:text-primary">
-                      Career
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/contact" className="hover:text-primary">
-                      Contact
-                    </Link>
-                  </li>
+                  {[
+                    { href: "/", label: "Home" },
+                    { href: "/about", label: "About Us" },
+                    { href: "/products", label: "Our Products" },
+                    { href: "/career", label: "Career" },
+                    { href: "/contact", label: "Contact" },
+                  ].map((item) => (
+                    <li key={item.href} className="relative">
+                      <Link
+                        href={item.href}
+                        className={`block py-2 transition-all duration-300 ${
+                          pathname === item.href
+                            ? "text-primary"
+                            : "text-dark-2"
+                        }`}
+                        onClick={closeMenu}
+                      >
+                        {item.label}
+                        <span
+                          className={`absolute left-0 bottom-0 w-full h-0.5 rounded-t-md transition-all duration-300 ${
+                            pathname === item.href
+                              ? "bg-primary"
+                              : "bg-transparent"
+                          }`}
+                        ></span>
+                      </Link>
+                    </li>
+                  ))}
                 </div>
               </motion.div>
             )}

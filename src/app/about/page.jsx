@@ -4,6 +4,7 @@ import ValuesPrinciples from "../components/pages/aboutus/ValuesPrinciples";
 import MarketingSalesTeam from "../components/pages/aboutus/MarketingSalesTeam";
 import BiomedicalTeam from "../components/pages/aboutus/BioMedicalTeam";
 import { AboutUs } from "../components/pages/aboutus/AboutUs";
+import NewsletterSection from "../components/pages/home/NewsletterSection";
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
       <ValuesPrinciples />
       <MarketingSalesTeam />
       <BiomedicalTeam />
+      <NewsletterSection />
       <Footer />
     </div>
   );

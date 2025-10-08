@@ -14,9 +14,9 @@ const Mapsection = () => {
           width="100%"
           height="100%"
           style={{ border: 0 }}
-          allowFullScreen=""   // ✅ Correct camelCase
+          allowFullScreen=""  
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade" // ✅ Correct camelCase
+          referrerPolicy="no-referrer-when-downgrade" 
         ></iframe>
       </div>
 

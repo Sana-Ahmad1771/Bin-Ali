@@ -10,7 +10,7 @@ import Image from "next/image";
 const slides = [
   {
     id: 1,
-    image: "/heroimg.png",
+    image: "/heroimg-1.png",
     title: "One of the Leading Medical Suppliers in UAE",
     desc: "Being the leading supplier of healthcare products in the region, Bin Ali Medical Supplies LLC deals with an extensive range of high-value products for the benefit of our loyal customer base.",
     caption: "Better health through innovation",
@@ -65,7 +65,7 @@ export default function HeroSlider() {
               ></div>
 
               {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-primary/30"></div>
+              <div className="absolute inset-0 bg-primary/60 "></div>
 
               {/* Content */}
               <div className="relative z-10 w-full">
@@ -82,7 +82,7 @@ export default function HeroSlider() {
                     cursor-pointer text-white font-semibold py-2 px-6 rounded-xl 
                     transition-all duration-300 disabled:opacity-60 
                     disabled:cursor-not-allowed hover:scale-105 active:scale-95 mt-6 
-                    sm:px-6 sm:py-3 bg-primary hover:bg-primary-light text-sm sm:text-base w-full 
+                    sm:px-6 sm:py-3 text-sm sm:text-base w-full 
                     sm:w-auto text-center"
                     >
                       MORE ABOUT US

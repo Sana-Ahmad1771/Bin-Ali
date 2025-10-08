@@ -6,7 +6,7 @@ export default function MarketingSalesTeam() {
   return (
     <section className="relative bg-gray-9 py-20 px-6 lg:px-16 xl:px-28 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
-        {/* Right Side - Image */}
+        {/* left Side - Image */}
         <motion.div
           className="flex-1 flex justify-center items-center relative"
           initial={{ opacity: 0, x: 50 }}
@@ -31,7 +31,7 @@ export default function MarketingSalesTeam() {
           </div>
         </motion.div>
 
-        {/* Left Side - Text Content */}
+        {/* right Side - Text Content */}
         <motion.div
           className="flex-1"
           initial={{ opacity: 0, x: -50 }}

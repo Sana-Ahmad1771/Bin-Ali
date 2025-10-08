@@ -190,10 +190,10 @@ export default function ContactSection() {
 
       {/* Decorative Elements */}
       <div className="absolute z-20 left-0 bottom-0 opacity-10 animate-bounce-smooth">
-        <img src="/demo-medical-pattern.svg" alt="pattern" />
+        <img src="/demo-medical-pattern.svg" alt="pattern" loading="lazy" />
       </div>
       <div className="absolute  z-20 right-0 -top-10 opacity-80 animate-bounce-smooth">
-        <img src="/shape.png" alt="shape" className="w-32 h-auto" />
+        <img src="/shape.png" alt="shape" className="w-32 h-auto" loading="lazy"/>
       </div>
     </section>
   );

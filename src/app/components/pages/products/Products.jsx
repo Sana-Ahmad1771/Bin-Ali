@@ -1,49 +1,46 @@
 "use client";
 
-import aboutbg from "../../../../../public/contactbg1.png";
+import productsbg from "../../../../../public/products-bg2.png";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-export const Careers = () => {
+export const Products = () => {
   return (
     <>
-      {/* Top Banner - Optimized */}
+      {/* Top Banner - Optimized with lazy loading */}
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="relative bg-cover bg-no-repeat bg-center min-h-[40vh] md:min-h-[50vh] flex flex-col justify-center items-center text-dark-2 px-4 overflow-hidden"
-        style={{ backgroundImage: `url(${aboutbg.src})` }}
+        className="relative bg-cover bg-no-repeat bg-center min-h-[50vh] 2xl:min-h-[55vh] flex flex-col justify-center items-center text-dark-2 px-5 overflow-hidden"
+        style={{ backgroundImage: `url(${productsbg.src})` }}
       >
-        <div className="absolute inset-0 bg-primary/30 z-10"></div>
+        <div className="absolute inset-0 bg-primary/50 z-10"></div>
         <div className="relative z-40 text-center text-white space-y-4">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold"
           >
-            Join Our Growing Team
+            Explore Our Quality Medical Supplies
           </motion.h1>
           <motion.div
-            className="w-16 h-1 bg-primary rounded-full mx-auto"
+            className="w-20 h-1 bg-primary rounded-full mx-auto"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
           />
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-sm md:text-base"
+            className="text-sm md:text-base lg:text-lg"
           >
             <Link href="/" className="hover:underline">Home</Link>
-            <span> / Career</span>
+            <span> / Our Products</span>
           </motion.div>
         </div>
       </motion.section>

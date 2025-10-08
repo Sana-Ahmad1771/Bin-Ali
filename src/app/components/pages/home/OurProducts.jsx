@@ -22,13 +22,13 @@ export default function OurProducts() {
           Our Products
         </motion.p>
         <motion.h2
-          className="text-dark-2 text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-2"
+          className="text-dark-2 text-4xl md:text-5xl font-bold leading-tight mb-2"
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.12 }}
         >
-          BAMS offers a wide range of
-          <span className="text-primary block">high-quality products</span>
+          BAMS offers a wide range of <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light ">high-quality products</span>
         </motion.h2>
         <p className="text-dark-5 max-w-2xl mx-auto">
           We distribute world-class healthcare and medical equipment across the UAE market.

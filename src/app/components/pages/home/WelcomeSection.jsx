@@ -8,12 +8,9 @@ export default function WelcomeSection() {
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
         {/* Left Side - Images */}
         <div className="relative w-full lg:flex-1 flex justify-center items-center z-30">
-          {/* shape right */}
-          <div className="absolute right-0 top-10 -translate-y-1/2 z-10 animate-bounce-smooth">
-            <Image
-            width={420}
-            height={420}
-            src="/shape.png" alt="" className="h-12 sm:h-20 w-auto rounded-md" />
+           {/* Top-right Decorative Shape */}
+          <div className="absolute -top-10 -right-10 animate-bounce-smooth">
+            <img src="/shape.png" alt="decorative shape" className="rounded-md" />
           </div>
 
           {/* Back Image */}
