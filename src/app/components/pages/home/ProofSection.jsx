@@ -32,7 +32,7 @@ export default function ProofSection() {
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-primary font-medium"
+        className="text-primary font-semibold text-sm uppercase tracking-wider mb-3"
       >
         Anyone can make promise
       </motion.p>

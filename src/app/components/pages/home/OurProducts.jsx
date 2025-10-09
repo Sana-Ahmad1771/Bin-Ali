@@ -12,7 +12,7 @@ export default function OurProducts() {
       className="relative bg-primary/20 py-20 px-6 lg:px-16 xl:px-28 overflow-hidden"
     >
       {/* Section Heading */}
-      <div className="max-w-7xl mx-auto text-center mb-8">
+      <div className="max-w-7xl mx-auto sm:text-center md:text-left mb-8">
         <motion.p
           className="text-primary font-semibold text-sm uppercase tracking-wide"
           initial={{ opacity: 0, y: 8 }}
@@ -30,7 +30,7 @@ export default function OurProducts() {
           BAMS offers a wide range of <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light ">high-quality products</span>
         </motion.h2>
-        <p className="text-dark-5 max-w-2xl mx-auto">
+        <p className="text-dark-5 max-w-2xl sm:mx-auto md:mx-0">
           We distribute world-class healthcare and medical equipment across the UAE market.
         </p>
       </div>

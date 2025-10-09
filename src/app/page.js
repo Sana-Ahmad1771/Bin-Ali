@@ -11,6 +11,7 @@ import ProofSection from "./components/pages/home/ProofSection";
 // import ProcessSection from "./components/pages/home/ProcessSection";
 import MissionSection from "./components/pages/home/MissionSection";
 import WhyChooseUs from "./components/pages/home/WhyChooseUs";
+import TestimonialsSection from "./components/pages/home/TestimonialSection";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <WhyChooseUs />
       <MissionSection />
       {/* <ProductShowcase /> */}
+      <TestimonialsSection />
       <ProofSection />
       <NewsletterSection />
       <Footer />
