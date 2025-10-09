@@ -17,14 +17,14 @@ export default function NewsletterSection() {
 
   return (
     <section
-      className="relative py-16 px-4 sm:px-8 md:px-12 bg-cover bg-center overflow-hidden"
+      className="relative py-16 bg-cover bg-center overflow-hidden"
       style={{
         backgroundImage: "url('/heroimg-3.png')",
       }}
     >
       <div className="absolute inset-0 bg-primary/80"></div>
 
-      <div className="relative py-3 flex flex-col sm:flex-col lg:flex-row justify-between items-center text-white gap-8 text-center lg:text-left">
+      <div className="relative px-6 lg:px-16 xl:px-14 py-3 flex flex-col sm:flex-col lg:flex-row justify-between items-center text-white gap-8 text-center lg:text-left">
         {/* Text Section */}
         <div className="w-full lg:w-1/2">
           <motion.h2
