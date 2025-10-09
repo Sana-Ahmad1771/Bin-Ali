@@ -57,8 +57,8 @@ export default function CareersSection() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-[#E6F9FF] to-white py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center mb-8 md:mb-12">
+    <section className="relative bg-gradient-to-br from-primary-light/20 to-white py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto text-center mb-8 md:mb-12 ">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export default function CareersSection() {
         </motion.p>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 md:gap-12 items-stretch">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 px-6 lg:px-16 xl:px-14 md:gap-12 items-stretch">
         {/* Left: Form */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -250,7 +250,7 @@ export default function CareersSection() {
         <img src="/demo-medical-pattern.svg" alt="pattern" className="w-32 h-32" />
       </div>
       <div className="hidden md:block absolute right-0 -top-10 opacity-80">
-        <img src="/shape.png" alt="shape" className="w-18 h-24" />
+        <img src="/shape.png" alt="shape" className="w-full h-24" />
       </div>
     </section>
   );

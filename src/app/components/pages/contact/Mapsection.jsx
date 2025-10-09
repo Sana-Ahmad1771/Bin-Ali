@@ -3,7 +3,7 @@ import React from "react";
 
 const Mapsection = () => {
   return (
-    <section className="relative py-12 bg-[#F8FBFF]">
+    <section className="relative px-6 lg:px-16 xl:px-14 py-12 bg-[#F8FBFF]">
       <h2 className="text-center text-3xl md:text-4xl font-bold text-dark-2 mb-8">
         Find Us on the <span className="text-primary">Map</span>
       </h2>

@@ -193,7 +193,7 @@ export default function ContactSection() {
         <img src="/demo-medical-pattern.svg" alt="pattern" loading="lazy" />
       </div>
       <div className="absolute  z-20 right-0 -top-10 opacity-80 animate-bounce-smooth">
-        <img src="/shape.png" alt="shape" className="w-32 h-auto" loading="lazy"/>
+        <img src="/shape.png" alt="shape" className="w-full h-auto" loading="lazy"/>
       </div>
     </section>
   );
