@@ -32,7 +32,7 @@ export default function OurProductsSection() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-[#E6F9FF] to-white py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-br from-primary-light/20 to-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
