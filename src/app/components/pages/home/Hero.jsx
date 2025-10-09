@@ -68,8 +68,8 @@ export default function HeroSlider() {
               <div className="absolute inset-0 bg-primary/60 "></div>
 
               {/* Content */}
-              <div className="relative z-10 w-full">
-                <div className="max-w-7xl mx-auto px-5">
+              <div className="relative z-10 w-full px-6 lg:px-16 xl:px-14 py-5">
+                <div className="max-w-7xl mx-auto">
                   <div className="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
                     <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase leading-tight">
                       {slide.title}

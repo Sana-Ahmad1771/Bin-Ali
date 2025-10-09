@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
   return (
     <section className="relative bg-primary/20 py-20 px-6 lg:px-16 xl:px-28 overflow-hidden">
       {/* Header */}
-      <div className="max-w-7xl mx-auto mb-16">
+      <div className="max-w-7xl mx-auto mb-16 text-center lg:text-left">
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
         >
           Delivering{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">
-            Trust & Quality
+            Trust & Quality <br />
           </span>{" "}
           in Every Step
         </motion.h2>
@@ -63,14 +63,14 @@ export default function WhyChooseUs() {
           initial={{ opacity: 0, scaleX: 0 }}
           whileInView={{ opacity: 1, scaleX: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-20 h-1 bg-primary mb-8"
+          className="w-20 h-1 bg-primary mb-8 mx-auto lg:mx-0"
         />
 
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-dark-5 max-w-2xl text-lg"
+          className="text-dark-5 max-w-2xl text-lg mx-auto lg:mx-0"
         >
           We combine innovation, integrity, and care to ensure our clients
           receive the best medical supplies and services across the region.
@@ -78,7 +78,7 @@ export default function WhyChooseUs() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 container max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
         {reasons.map((item, index) => (
           <motion.div
             key={index}
@@ -88,16 +88,16 @@ export default function WhyChooseUs() {
             transition={{ type: "spring", stiffness: 200, damping: 12 }}
             className="relative group"
           >
-            <div className="relative bg-white border border-gray-200 rounded-2xl p-2 text-center shadow-md transition-all duration-300 h-[340px] flex flex-col items-center justify-center overflow-hidden group-hover:shadow-2xl group-hover:border-transparent">
+            <div className="relative bg-white border border-gray-200 rounded-2xl p-[2px] shadow-md transition-all duration-300 overflow-hidden h-[360px] flex flex-col group-hover:shadow-2xl group-hover:border-transparent">
               
-              {/* ✅ Static top border visible only when not hovered */}
+              {/* Top border light line (always visible) */}
               <div
                 className={`absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-primary to-primary-light rounded-t-2xl z-10 transition-opacity duration-300 ${
                   hovered === index ? "opacity-0" : "opacity-100"
                 }`}
               />
 
-              {/* 🌟 Animated glowing border (only visible on hover) */}
+              {/* Animated border glow on hover */}
               <div
                 className={`absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-primary via-primary-light to-primary transition-opacity duration-300 ${
                   hovered === index ? "opacity-100 animate-border-glow" : "opacity-0"
@@ -105,8 +105,10 @@ export default function WhyChooseUs() {
               ></div>
 
               {/* Inner content */}
-              <div className="relative z-20 bg-white rounded-2xl h-full flex flex-col items-center justify-center p-4">
-                <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-primary-light mb-6">
+              <div className="relative z-20 bg-white rounded-2xl h-full flex flex-col items-center p-6 text-center">
+                
+                {/* Fixed icon area */}
+                <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-primary-light mb-6">
                   <motion.div
                     animate={{ rotate: hovered === index ? 360 : 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -115,13 +117,16 @@ export default function WhyChooseUs() {
                   </motion.div>
                 </div>
 
-                <div className="w-12 h-0.5 bg-primary/70 mb-4 mx-auto" />
-                <h3 className="text-xl font-semibold mb-3 text-dark-2">
-                  {item.title}
-                </h3>
-                <p className="text-dark-5 text-sm leading-relaxed max-w-[250px] mx-auto">
-                  {item.description}
-                </p>
+                {/* Title and text area */}
+                <div className="flex flex-col justify-start flex-grow">
+                  <div className="w-12 h-0.5 bg-primary/70 mb-4 mx-auto" />
+                  <h3 className="text-xl font-semibold mb-3 text-dark-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-dark-5 text-sm leading-relaxed mx-auto">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

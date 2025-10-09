@@ -250,7 +250,7 @@ export default function CareersSection() {
         <img src="/demo-medical-pattern.svg" alt="pattern" className="w-32 h-32" />
       </div>
       <div className="hidden md:block absolute right-0 -top-10 opacity-80">
-        <img src="/shape.png" alt="shape" className="w-24 h-24" />
+        <img src="/shape.png" alt="shape" className="w-18 h-24" />
       </div>
     </section>
   );

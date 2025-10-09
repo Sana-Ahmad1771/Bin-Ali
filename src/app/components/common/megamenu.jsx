@@ -95,7 +95,7 @@ const MegaMenu = ({ setIsMegaMenuOpen }) => {
       }}
     >
       {/* Trigger Button */}
-      <button className="py-2 text-body hover:text-primary cursor-pointer flex items-center font-medium">
+      <button className="py-2 text-body hover:text-primary cursor-pointer flex items-center">
         Our Brands <span className="ml-1 transition-transform">▾</span>
       </button>
 

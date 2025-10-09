@@ -28,18 +28,25 @@ export default function OurProducts() {
           transition={{ duration: 0.55, delay: 0.12 }}
         >
           BAMS offers a wide range of <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light ">high-quality products</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light ">
+            high-quality products
+          </span>
         </motion.h2>
         <p className="text-dark-5 max-w-2xl sm:mx-auto md:mx-0">
-          We distribute world-class healthcare and medical equipment across the UAE market.
+          We distribute world-class healthcare and medical equipment across the
+          UAE market.
         </p>
       </div>
 
-  {/* Sliding logos/images with title below - keeps layout */}
-  <div className="max-w-7xl mx-auto">
+      {/* Sliding logos/images with title below - keeps layout */}
+      <div className="max-w-7xl mx-auto">
         <Swiper
           modules={[Autoplay]}
-          autoplay={{ delay: 2200, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          autoplay={{
+            delay: 2200,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           loop={true}
           grabCursor={true}
           className="py-6"
@@ -73,16 +80,42 @@ export default function OurProducts() {
                 transition={{ duration: 0.25 }}
               >
                 <div className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 lg:w-32 lg:h-28 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
-                  <Image src={item.img} alt={item.title} width={160} height={80} className="object-contain w-full h-auto" />
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    width={160}
+                    height={80}
+                    className="object-contain w-full h-auto"
+                  />
                 </div>
                 <div className="mt-2 sm:mt-3">
-                  <h4 className="text-xs sm:text-sm md:text-base font-medium text-dark-2 truncate max-w-[120px] sm:max-w-[160px] md:max-w-[220px]">{item.title}</h4>
+                  <h4 className="text-xs sm:text-sm md:text-base font-medium text-dark-2 truncate max-w-[120px] sm:max-w-[160px] md:max-w-[220px]">
+                    {item.title}
+                  </h4>
                 </div>
               </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
+      {/* Decorative elements - Only show on larger screens */}
+      <div className="hidden md:block absolute left-0 bottom-0 opacity-10">
+        <img
+          src="/demo-medical-pattern.svg"
+          alt="pattern"
+          className="w-32 h-32"
+        />
+      </div>
+      {/* Decorative Top Shape - Full Width */}
+      <div
+        className="absolute z-10 top-0 left-0 w-full h-[60px] md:h-[65px] opacity-80 overflow-hidden pointer-events-none"
+        style={{
+          backgroundImage: "url('/shape.png')",
+          backgroundRepeat: "repeat-x",
+          backgroundSize: "auto 100%", // keeps natural aspect ratio and repeats horizontally
+          backgroundPosition: "top center",
+        }}
+      ></div>
     </section>
   );
 }
