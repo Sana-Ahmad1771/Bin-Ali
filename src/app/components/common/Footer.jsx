@@ -42,7 +42,7 @@ const Footer = () => {
               alt="Logo"
               width={150}
               height={50}
-              className="mb-6"
+              className="mb-6 w-auto h-14"
               priority
             />
           </a>

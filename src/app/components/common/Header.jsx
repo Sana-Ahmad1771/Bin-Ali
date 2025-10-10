@@ -96,7 +96,7 @@ const Header = () => {
               alt="binali-logo"
               width={140}
               height={40}
-              className="w-36 h-auto"
+              className="w-auto h-14"
               priority
             />
           </Link>
