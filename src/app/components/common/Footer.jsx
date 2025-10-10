@@ -19,41 +19,41 @@ const Footer = () => {
   };
 
   return (
-    <motion.section
+    <motion.footer
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="w-full  bg-white font-inter border-t border-gray-200 overflow-hidden text-[#333] text-[16px] leading-normal "
+      className="w-full bg-white font-inter border-t border-gray-200 text-[#333] text-[16px] leading-normal"
     >
       {/* Main Content */}
-      <div className="py-8 px-6 lg:px-16 xl:px-14 flex flex-col lg:flex-row justify-between flex-wrap gap-12">
+      <div className="max-w-[1600px] mx-auto py-12 px-6 lg:px-16 xl:px-24 flex flex-col lg:flex-row justify-between flex-wrap gap-12">
         {/* Logo + Contact */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="flex-1 min-w-[190px] lg:max-w-[30%]"
+          className="flex-1 min-w-[220px] lg:max-w-[30%]"
         >
           <a href="/">
             <Image
               src="/logo-svg-binali.svg"
               alt="Logo"
-              width={130}
-              height={40}
-              className="mb-5 w-32"
+              width={150}
+              height={50}
+              className="mb-6"
               priority
             />
           </a>
-          <p className="mb-6 text-[16px]">
-            Bin Ali Medical Supplies LLC is a reputed Medical Supplies Dubai
-            company built on a distinct vision. Since early 2000, BAMS has grown
+          <p className="mb-6 text-[16px] leading-relaxed text-gray-700">
+            Bin Ali Medical Supplies LLC is a reputed Medical Supplies company
+            based in Dubai, UAE. Established in the early 2000s, BAMS has grown
             to be a leading supplier of a wide range of excellent products.
           </p>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <FiPhone />
+              <FiPhone className="text-primary" />
               <span
                 onClick={() => onClickCopy("(239) 555-0108")}
                 className="cursor-pointer hover:underline underline-offset-4"
@@ -62,9 +62,9 @@ const Footer = () => {
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <MdOutlineEmail />
+              <MdOutlineEmail className="text-primary" />
               <span
-                onClick={() => onClickCopy("info@safecareind.xyz")}
+                onClick={() => onClickCopy("info@binali.xyz")}
                 className="cursor-pointer hover:underline underline-offset-4"
               >
                 info@binali.xyz
@@ -73,67 +73,52 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        {/* Quick Links*/}
+        {/* Quick Links */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
+          className="min-w-[200px]"
         >
-          <h3 className="text-2xl font-plus-jakarta-sans mb-4">Quick Links</h3>
-          <ul className="space-y-4 text-[16px]">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About Us</a>
-            </li>
-            <li>
-              <a href="#">Products</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
+          <h3 className="text-xl font-semibold mb-5 text-dark-2">Quick Links</h3>
+          <ul className="space-y-3 text-[16px] text-gray-700">
+            <li><a href="#" className="hover:text-primary">Home</a></li>
+            <li><a href="#" className="hover:text-primary">About Us</a></li>
+            <li><a href="#" className="hover:text-primary">Products</a></li>
+            <li><a href="#" className="hover:text-primary">Contact Us</a></li>
           </ul>
         </motion.div>
 
-        {/* Browse Category */}
+        {/* MOH Info */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
+          className="min-w-[200px]"
         >
-          <h3 className="text-2xl font-plus-jakarta-sans mb-4">MOH</h3>
-          <ul className="space-y-4 text-[16px]">
-            <li>
-              <a href="#">APPROVAL NUMBER :</a>
-            </li>
-            <li>
-              <a href="#">8AEVFQ0O-281024</a>
-            </li>
-            <li>
-              <a href="#">DATE : 27/10/2024 TO 27/10/2025</a>
-            </li>
+          <h3 className="text-xl font-semibold mb-5 text-dark-2">MOH</h3>
+          <ul className="space-y-3 text-[16px] text-gray-700">
+            <li>APPROVAL NUMBER:</li>
+            <li className="font-semibold text-primary">8AEVFQ0O-281024</li>
+            <li>DATE: 27/10/2024 TO 27/10/2025</li>
           </ul>
         </motion.div>
 
-        {/* Location and Socials */}
+        {/* Branch Offices & Socials */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex-1 min-w-[190px] lg:max-w-[20%]"
+          className="flex-1 min-w-[220px] lg:max-w-[25%]"
         >
-          <h3 className="text-2xl font-plus-jakarta-sans mb-4">
-            {" "}
-            BRANCH OFFICES
-          </h3>
-          <p className="mb-6 text-[16px]">
+          <h3 className="text-xl font-semibold mb-5 text-dark-2">Branch Offices</h3>
+          <p className="mb-6 text-[16px] text-gray-700 leading-relaxed">
             Dubai - +971-4–4520022 <br />
             Al Ain - +971-3-7824596 <br />
-            AbuDhabi - +971-3-7824596
+            Abu Dhabi - +971-3-7824596
           </p>
           <div className="flex gap-3">
             {[FaFacebookF, FaXTwitter, AiFillInstagram, IoLogoLinkedin].map(
@@ -141,10 +126,9 @@ const Footer = () => {
                 <a
                   key={idx}
                   href="#"
-                  className="w-10 h-10 flex items-center justify-center bg-primary/80 rounded hover:bg-gray-300 transition"
-                  aria-label={`social-icon-${idx}`}
+                  className="w-10 h-10 flex items-center justify-center bg-primary/80 text-white rounded-full hover:bg-primary-light transition"
                 >
-                  <Icon size={20} />
+                  <Icon size={18} />
                 </a>
               )
             )}
@@ -158,22 +142,25 @@ const Footer = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.5 }}
         viewport={{ once: true }}
-        className="px-6 lg:px-16 xl:px-14 border-t text-white border-gray-200 py-6 bg-primary flex flex-col lg:flex-row justify-between items-center text-center gap-2"
+        className="bg-primary text-white py-6"
       >
-        <p>
-          © 2025 Binali Medical Supplies. All rights reserved{" "}
-          {new Date().getFullYear()}
-        </p>
-        <p className="text-wrap">Privacy Policy | Terms & Conditions</p>
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 flex flex-col lg:flex-row justify-between items-center gap-3 text-center">
+          <p>
+            © {new Date().getFullYear()} Bin Ali Medical Supplies. All rights reserved.
+          </p>
+          <p className="text-sm sm:text-base">
+            Privacy Policy | Terms & Conditions
+          </p>
+        </div>
       </motion.div>
 
       {/* Copy Alert */}
       {copied && (
-        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 bg-[#1E3D69] text-white px-4 py-2 rounded shadow-md text-sm z-50">
+        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-2 rounded-md shadow-md text-sm z-50">
           Copied to clipboard!
         </div>
       )}
-    </motion.section>
+    </motion.footer>
   );
 };
 

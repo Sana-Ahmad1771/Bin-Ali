@@ -108,7 +108,7 @@ const MegaMenu = ({ setIsMegaMenuOpen }) => {
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.2 }}
             className="fixed left-0 w-full bg-white shadow-xl border-t border-gray-100 z-40"
-            style={{ top: "125px" }}
+            style={{ top: "130px" }}
           >
             <div className="container mx-auto px-6 py-8">
               {/* Header */}

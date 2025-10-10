@@ -28,7 +28,7 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="relative min-h-[800px] sm:min-h[1000px] py-20 pb-20 sm:pb-24 md:pb-42 lg:pb-32">
+    <section className="relative min-h-[800px] sm:min-h[1000px] py-20 pb-20 sm:pb-24 md:pb-42 lg:pb-32 ">
      <div className="relative z-10"
      style={{
         backgroundImage: `url(${aboutbg.src})`,
@@ -39,7 +39,7 @@ export default function TestimonialSection() {
          {/* Overlay */}
       <div className="absolute h-[800px] inset-0 bg-white/70 backdrop-blur-[2px]"></div>
       {/* Main Content */}
-      <div className="relative bg-white p-4 sm:p-6 py-10 w-[90%] sm:w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] container mx-auto z-20 top-0 sm:top-24 md:top-40 lg:top-52 xl-top-70">
+      <div className="relative bg-white p-4 sm:p-6 py-10 max-w-[1410px] mx-auto px-6 lg:px-16 xl:px-24 z-20 top-0 sm:top-24 md:top-40 lg:top-52 xl-top-70">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 px-2">
           <p className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3">

@@ -5,8 +5,9 @@ import { FaBullseye } from "react-icons/fa";
 
 export default function MissionSection() {
   return (
-    <section className="relative bg-white py-20 px-6 lg:px-16 xl:px-28 overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+    <section className="relative bg-white py-20 overflow-hidden">
+      {/* unified container width for all sections */}
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 flex flex-col lg:flex-row items-center gap-16">
         {/* Left Side - Text Content */}
         <motion.div
           className="flex-1 relative z-10"
@@ -63,7 +64,7 @@ export default function MissionSection() {
 
           <div className="rounded-2xl overflow-hidden shadow-lg relative z-10">
             <Image
-              src="/team1.png" // 🖼️ Replace with your mission image
+              src="/team1.png"
               alt="Our Mission"
               width={500}
               height={450}

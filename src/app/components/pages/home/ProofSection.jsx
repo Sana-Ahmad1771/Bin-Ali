@@ -27,33 +27,41 @@ const stats = [
 
 export default function ProofSection() {
   return (
-    <section className="bg-white py-20 text-center">
-      <motion.p
-        initial={{ opacity: 0, y: -10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-primary font-semibold text-sm uppercase tracking-wider mb-3"
-      >
-        Anyone can make promise
-      </motion.p>
+    <section className="relative bg-white py-20 px-5 lg:px-42 xl:px-53 overflow-hidden">
+      {/* Heading */}
+      <div className="text-center mb-14">
+        <motion.p
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-primary font-semibold text-sm uppercase tracking-wider mb-3"
+        >
+          Anyone can make promise
+        </motion.p>
 
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-4xl md:text-5xl font-bold text-dark-2 mb-12"
-      >
-        We can give you proof
-      </motion.h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-dark-2 text-4xl md:text-5xl font-bold leading-tight"
+        >
+          We can give you proof
+        </motion.h2>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+      {/* Stats Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-16 max-w-6xl mx-auto text-center">
         {stats.map((item, i) => (
           <motion.div
             key={item.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
-            className="flex flex-col items-center space-y-3 border-r border-gray-200 last:border-none"
+            className={`flex flex-col items-center justify-center space-y-3 ${
+              i !== stats.length - 1
+                ? "md:border-r border-gray-200 md:pr-6 lg:pr-10"
+                : ""
+            }`}
           >
             <div>{item.icon}</div>
             <h3 className="text-3xl font-bold text-dark-2">{item.value}</h3>
@@ -61,6 +69,11 @@ export default function ProofSection() {
           </motion.div>
         ))}
       </div>
+
+      {/* Decorative pattern (optional, consistent with theme)
+      <div className="absolute right-0 bottom-0 opacity-10 animate-bounce-smooth">
+        <img src="/demo-medical-pattern.svg" alt="pattern" />
+      </div> */}
     </section>
   );
 }

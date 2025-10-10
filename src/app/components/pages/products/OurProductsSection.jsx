@@ -32,8 +32,8 @@ export default function OurProductsSection() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-primary-light/20 to-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center mb-12">
+    <section className="bg-gradient-to-br from-primary-light/20 to-white py-16 px-5 lg:px-42 xl:px-53">
+      <div className="max-w-[1400px] mx-auto text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export default function OurProductsSection() {
       </div>
 
       {/* Product Grid with Lazy Loading */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 lg:px-16 xl:px-14 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
         {products.map((product, index) => (
           <motion.div
             key={index}

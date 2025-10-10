@@ -6,7 +6,7 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import Image from "next/image";
+
 const slides = [
   {
     id: 1,
@@ -37,7 +37,7 @@ export default function HeroSlider() {
   return (
     <section
       className="relative w-full overflow-hidden"
-      style={{ minHeight: "calc(100vh - 120px)", height: "auto" }}
+      style={{ minHeight: "calc(100vh - 120px)" }}
     >
       <Swiper
         modules={[Autoplay, Navigation, EffectFade]}
@@ -49,14 +49,14 @@ export default function HeroSlider() {
         loop
         effect="fade"
         fadeEffect={{ crossFade: true }}
-        speed={1200} // smoother transition
+        speed={1200}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         className="h-full"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={slide.id}>
             <div className="relative w-full h-[calc(100vh-120px)] flex items-center overflow-hidden">
-              {/* Background with zoom animation */}
+              {/* Background Image */}
               <div
                 className={`absolute inset-0 bg-cover bg-center transition-transform duration-[5000ms] ${
                   activeIndex === index ? "scale-110" : "scale-100"
@@ -64,26 +64,22 @@ export default function HeroSlider() {
                 style={{ backgroundImage: `url(${slide.image})` }}
               ></div>
 
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-primary/60 "></div>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-primary/60"></div>
 
               {/* Content */}
-              <div className="relative z-10 w-full px-6 lg:px-16 xl:px-14 py-5">
-                <div className="max-w-7xl mx-auto">
-                  <div className="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
-                    <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase leading-tight">
+              <div className="relative z-10 w-full">
+                <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24">
+                  <div className="max-w-3xl text-center md:text-left">
+                    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
                       {slide.title}
                     </h1>
                     <p className="text-white/90 mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
                       {slide.desc}
                     </p>
                     <button
-                      className="bg-gradient-to-r from-primary to-primary-light 
-                    cursor-pointer text-white font-semibold py-2 px-6 rounded-xl 
-                    transition-all duration-300 disabled:opacity-60 
-                    disabled:cursor-not-allowed hover:scale-105 active:scale-95 mt-6 
-                    sm:px-6 sm:py-3 text-sm sm:text-base w-full 
-                    sm:w-auto text-center"
+                      className="bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-3 px-8 rounded-xl 
+                      mt-6 sm:py-3 sm:px-10 text-sm sm:text-base transition-all duration-300 hover:scale-105 active:scale-95"
                     >
                       MORE ABOUT US
                     </button>
@@ -96,7 +92,7 @@ export default function HeroSlider() {
       </Swiper>
 
       {/* Custom Vertical Pagination */}
-      <div className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 hidden sm:flex flex-col items-center gap-4 sm:gap-6">
+      <div className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 hidden sm:flex flex-col items-center gap-6">
         {slides.map((_, i) => (
           <div key={i} className="flex flex-col items-center">
             <span
@@ -107,26 +103,26 @@ export default function HeroSlider() {
               0{i + 1}
             </span>
             {activeIndex === i && (
-              <span className="w-px h-8 sm:h-12 bg-white mt-1"></span>
+              <span className="w-px h-10 sm:h-14 bg-white mt-1"></span>
             )}
           </div>
         ))}
       </div>
-      {/* Bottom Preview + Navigation */}
+
+      {/* Navigation + Caption */}
       <div className="absolute right-0 bottom-0 z-20 w-[90%] sm:w-auto">
-        {/* Arrows */}
         <div className="flex items-center">
-          <button className="hero-prev p-3 sm:p-4 text-primary bg-white border-r border-primary cursor-pointer hover:bg-gray-100">
+          <button className="hero-prev p-4 text-primary bg-white border-r border-primary cursor-pointer hover:bg-gray-100">
             <FaArrowLeftLong />
           </button>
-          <button className="hero-next p-3 sm:p-4 text-primary bg-white cursor-pointer hover:bg-gray-100">
+          <button className="hero-next p-4 text-primary bg-white cursor-pointer hover:bg-gray-100">
             <FaArrowRightLong />
           </button>
         </div>
 
         {/* Caption Preview */}
-        <div className="flex  items-center justify-between sm:w-[400px] bg-gradient-to-r to-primary-light from-gray-100 p-3 sm:p-4">
-          <div className=" mb-2 sm:mb-0">
+        <div className="flex items-center justify-between sm:w-[420px] bg-gradient-to-r to-primary-light from-gray-100 p-4">
+          <div>
             <span className="text-primary font-bold text-base sm:text-lg">
               0{activeIndex + 1}.
             </span>

@@ -35,92 +35,87 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="relative bg-white py-20 px-6 lg:px-16 xl:px-28 overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-stretch">
+    <section className="relative bg-white py-20 px-6 lg:px-16 xl:px-24 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-12 items-stretch">
         {/* LEFT: Contact Form */}
         <motion.div
-          className="flex-1 relative z-30 flex flex-col justify-between bg-white/90 shadow-md rounded-2xl p-8 border border-white/40 h-auto"
+          className="flex-1 bg-white/90 shadow-md rounded-2xl p-8 border border-white/40 h-auto"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex-1 flex flex-col ">
-            <div className="flex-1">
-              <p className="text-primary font-semibold text-sm uppercase tracking-wide mb-2">
-                Drop Us a Line
-              </p>
-              <h2 className="text-dark-2 text-4xl md:text-5xl font-bold mb-8">
-                Write Your{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">
-                  Cover Letter
-                </span>
-              </h2>
+          <div>
+            <p className="text-primary font-semibold text-sm uppercase tracking-wide mb-2">
+              Drop Us a Line
+            </p>
+            <h2 className="text-dark-2 text-4xl md:text-5xl font-bold mb-8">
+              Write Your{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">
+                Cover Letter
+              </span>
+            </h2>
 
-              <form className="space-y-4" onSubmit={handleSubmit}>
-                {error && (
-                  <div className="text-red-600 bg-red-50 border border-red-100 p-3 rounded">
-                    {error}
-                  </div>
-                )}
-
-                <div>
-                  <label className="block text-dark-4 font-medium mb-2">Your Name</label>
-                  <input
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    type="text"
-                    placeholder="Enter your name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none shadow-sm"
-                  />
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              {error && (
+                <div className="text-red-600 bg-red-50 border border-red-100 p-3 rounded">
+                  {error}
                 </div>
+              )}
 
-                <div>
-                  <label className="block text-dark-4 font-medium mb-2">Your Email</label>
-                  <input
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none shadow-sm"
-                  />
-                </div>
+              <div>
+                <label className="block text-dark-4 font-medium mb-2">Your Name</label>
+                <input
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Enter your name"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none shadow-sm"
+                />
+              </div>
 
-                <div>
-                  <label className="block text-dark-4 font-medium mb-2">Phone Number</label>
-                  <input
-                    name="phone"
-                    value={form.phone}
-                    onChange={handleChange}
-                    type="text"
-                    placeholder="Enter your phone number"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none shadow-sm"
-                  />
-                </div>
+              <div>
+                <label className="block text-dark-4 font-medium mb-2">Your Email</label>
+                <input
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none shadow-sm"
+                />
+              </div>
 
-                <div>
-                  <label className="block text-dark-4 font-medium mb-2">Message</label>
-                  <textarea
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="Write your message"
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none shadow-sm"
-                  />
-                </div>
-              </form>
-            </div>
+              <div>
+                <label className="block text-dark-4 font-medium mb-2">Phone Number</label>
+                <input
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Enter your phone number"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none shadow-sm"
+                />
+              </div>
 
-            <div className="mt-8">
-              <div className="flex items-center gap-4">
+              <div>
+                <label className="block text-dark-4 font-medium mb-2">Message</label>
+                <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Write your message"
+                  rows={5}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none shadow-sm"
+                />
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-4 items-center">
                 <button
                   type="submit"
                   disabled={sending}
-                  className="bg-gradient-to-r from-primary to-primary-light cursor-pointer text-white font-semibold py-2 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed hover:scale-105 active:scale-95 min-w-[200px]"
-                  onClick={handleSubmit}
+                  className="bg-gradient-to-r from-primary to-primary-light cursor-pointer text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
                 >
                   {sending ? "Sending..." : "Send Message"}
                 </button>
@@ -131,19 +126,19 @@ export default function ContactSection() {
                   </div>
                 )}
               </div>
-            </div>
+            </form>
           </div>
         </motion.div>
 
         {/* RIGHT: Office Info */}
         <motion.div
-          className="flex-1 flex flex-col space-y-8 h-auto"
+          className="flex-1 flex flex-col space-y-8"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {[ 
+          {[
             {
               city: "Abu Dhabi",
               address: "Office 601, Mazyad Mall Tower 1, Mohammed Bin Zayed City, Musaffah",
@@ -165,20 +160,24 @@ export default function ContactSection() {
           ].map((office, i) => (
             <div
               key={i}
-              className="bg-white/90 border border-white/60 shadow-md p-8 rounded-2xl flex-1"
+              className="bg-white/90 border border-gray-200 shadow-md p-8 rounded-2xl"
             >
-              <div className="h-full flex flex-col justify-center">
+              <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
                   <FaMapMarkerAlt className="text-primary text-2xl" />
-                  <h3 className="text-2xl font-semibold text-dark-2">{office.city}</h3>
+                  <h3 className="text-2xl font-semibold text-dark-2">
+                    {office.city}
+                  </h3>
                 </div>
-
                 <p className="text-dark-5 mb-3">{office.address}</p>
                 <p className="text-dark-5 mb-2 flex items-center gap-2">
                   <FaEnvelope className="text-primary" /> {office.email}
                 </p>
                 {office.phone.map((num, idx) => (
-                  <p key={idx} className="text-dark-5 flex items-center gap-2 text-[15px]">
+                  <p
+                    key={idx}
+                    className="text-dark-5 flex items-center gap-2 text-[15px]"
+                  >
                     <FaPhoneAlt className="text-primary" /> {num}
                   </p>
                 ))}
@@ -189,11 +188,11 @@ export default function ContactSection() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute z-20 left-0 bottom-0 opacity-10 animate-bounce-smooth">
+      <div className="absolute left-0 bottom-0 opacity-10 animate-bounce-smooth">
         <img src="/demo-medical-pattern.svg" alt="pattern" loading="lazy" />
       </div>
-      <div className="absolute  z-20 right-0 -top-10 opacity-80 animate-bounce-smooth">
-        <img src="/shape.png" alt="shape" className="w-full h-auto" loading="lazy"/>
+      <div className="absolute right-0 -top-10 opacity-80 animate-bounce-smooth">
+        <img src="/shape.png" alt="shape" className="w-full h-auto" loading="lazy" />
       </div>
     </section>
   );

@@ -2,11 +2,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaUsers, FaCogs } from "react-icons/fa";
+
 export default function MarketingSalesTeam() {
   return (
-    <section className="relative bg-gray-9 py-20 px-6 lg:px-16 xl:px-28 overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
-        {/* left Side - Image */}
+    <section className="relative bg-gray-9 py-20 px-6 lg:px-16 xl:px-24 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
+        {/* Left Side - Image */}
         <motion.div
           className="flex-1 flex justify-center items-center relative"
           initial={{ opacity: 0, x: 50 }}
@@ -14,24 +15,24 @@ export default function MarketingSalesTeam() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          {/* Top-right Decorative Shape */}
+          {/* Decorative Shape */}
           <div className="absolute -top-10 -right-10 animate-bounce-smooth">
             <img src="/shape.png" alt="decorative shape" className="rounded-md" />
           </div>
 
           {/* Main Image */}
-          <div className="rounded-xl overflow-hidden shadow-lg relative z-10">
+          <div className="rounded-xl overflow-hidden shadow-lg relative z-10 max-w-[600px] lg:max-w-[700px]">
             <Image
               src="/team2.png"
               alt="Marketing & Sales Team"
-              width={420}
-              height={480}
-              className="rounded-xl object-cover"
+              width={700}
+              height={800}
+              className="rounded-xl w-full h-auto object-cover"
             />
           </div>
         </motion.div>
 
-        {/* right Side - Text Content */}
+        {/* Right Side - Text Content */}
         <motion.div
           className="flex-1"
           initial={{ opacity: 0, x: -50 }}
@@ -74,8 +75,8 @@ export default function MarketingSalesTeam() {
             </ul>
           </div>
 
-         {/* Footer Info */}
-          <div className="flex items-center gap-6 border-t border-gray-4 pt-6">
+          {/* Footer Info */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 border-t border-gray-4 pt-6">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                 <FaUsers size={20} />
@@ -103,7 +104,7 @@ export default function MarketingSalesTeam() {
         </motion.div>
       </div>
 
-      {/* Bottom-left Background Pattern */}
+      {/* Background Pattern */}
       <div className="absolute left-0 bottom-0 opacity-10 animate-bounce-smooth">
         <img src="/demo-medical-pattern.svg" alt="pattern" />
       </div>

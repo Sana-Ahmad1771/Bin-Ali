@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function CeoMessage() {
   return (
-    <section className="relative bg-gray-9 py-20 px-6 lg:px-16 xl:px-28 overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
+    <section className="relative bg-gray-9 py-20 overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 flex flex-col-reverse lg:flex-row items-center gap-16">
         {/* Left Side - Text Content */}
         <motion.div
           className="flex-1"
@@ -26,20 +26,28 @@ export default function CeoMessage() {
           </h2>
 
           <div className="space-y-4 text-dark-5 leading-relaxed mb-8">
+            <p>Dear Visitor,</p>
             <p>
-              Dear Visitor,
+              Bin Ali Medical Supplies LLC is a reputed Medical Supplies Company
+              based in the United Arab Emirates, built on a distinct vision. It
+              is driven by a set of great values, which are amply reflected in
+              every aspect of our business.
             </p>
             <p>
-              Bin Ali Medical Supplies LLC is a reputed Medical Supplies Company based in the United Arab Emirates, built on a distinct vision. It is driven by a set of great values, which are amply reflected in every aspect of our business.
+              Since its inception in the early 2000s, BAMS has grown to become a
+              leading supplier of a wide range of quality products. Our powerful
+              presence in the market is supported by a loyal customer base and a
+              deep commitment to excellence.
             </p>
             <p>
-              Since its inception in the early 2000s, BAMS has grown to become a leading supplier of a wide range of quality products. Our powerful presence in the market is supported by a loyal customer base and a deep commitment to excellence.
+              We continuously strive to provide better products and services,
+              envisioning BAMS as a world-class company engaged in manufacturing
+              and distribution of high-quality medical and healthcare supplies
+              that are affordable and accessible to all.
             </p>
             <p>
-              We continuously strive to provide better products and services, envisioning BAMS as a world-class company engaged in manufacturing and distribution of high-quality medical and healthcare supplies that are affordable and accessible to all.
-            </p>
-            <p>
-              Thank you for your interest in Bin Ali Medical Supplies. We look forward to the opportunity to serve you.
+              Thank you for your interest in Bin Ali Medical Supplies. We look
+              forward to the opportunity to serve you.
             </p>
           </div>
 

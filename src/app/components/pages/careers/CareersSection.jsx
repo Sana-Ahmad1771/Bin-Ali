@@ -57,8 +57,8 @@ export default function CareersSection() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-primary-light/20 to-white py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center mb-8 md:mb-12 ">
+    <section className="relative bg-gradient-to-br from-primary-light/20 to-white py-12 md:py-16 px-5 lg:px-42 xl:px-53">
+      <div className="mx-auto text-center mb-8 md:mb-12 ">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export default function CareersSection() {
         </motion.p>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 px-6 lg:px-16 xl:px-14 md:gap-12 items-stretch">
+      <div className="mx-auto max-w-[1400px] flex flex-col lg:flex-row gap-8 md:gap-12 items-stretch">
         {/* Left: Form */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
