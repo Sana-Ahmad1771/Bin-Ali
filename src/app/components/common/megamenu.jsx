@@ -110,7 +110,7 @@ const MegaMenu = ({ setIsMegaMenuOpen }) => {
             className="fixed left-0 w-full bg-white shadow-xl border-t border-gray-100 z-40"
             style={{ top: "130px" }}
           >
-            <div className="container mx-auto px-6 py-8">
+            <div className="max-w-[1400px] mx-auto px-6 py-8">
               {/* Header */}
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-dark-2 mb-2">
