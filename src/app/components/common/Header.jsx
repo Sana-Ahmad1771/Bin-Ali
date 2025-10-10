@@ -129,6 +129,11 @@ const Header = () => {
               </Link>
             </li>
             <li>
+              <Link href="/partners" className={navItemClass("/partners")}>
+                Our Partners <span className={navItemBorderClass("/partners")} />
+              </Link>
+            </li>
+            <li>
               <Link href="/career" className={navItemClass("/career")}>
                 Career <span className={navItemBorderClass("/career")} />
               </Link>

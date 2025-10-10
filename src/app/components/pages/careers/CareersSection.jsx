@@ -45,9 +45,7 @@ export default function CareersSection() {
         coverLetter: "",
         resume: null,
       });
-      if (fileInputRef.current) {
-        fileInputRef.current.value = "";
-      }
+      if (fileInputRef.current) fileInputRef.current.value = "";
       setTimeout(() => setSuccess(false), 4000);
     } catch {
       setError("Something went wrong. Please try again.");
@@ -57,199 +55,213 @@ export default function CareersSection() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-primary-light/20 to-white py-12 md:py-16 px-5 lg:px-42 xl:px-53">
-      <div className="mx-auto text-center mb-8 md:mb-12 ">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-2 mb-3 md:mb-4"
-        >
-          Build Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Career with Us</span>
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="text-dark-5 max-w-3xl mx-auto leading-relaxed text-sm md:text-base"
-        >
-          Our career not only brings a smile to your face but also commands
-          respect and handsome earnings. Learn more about the exciting career
-          options we have and take your first step toward a rewarding future
-          with <strong>Bin Ali Medical Supplies</strong>.
-        </motion.p>
-      </div>
+    <section className="relative bg-gradient-to-br from-primary-light/20 to-white py-20 px-6 lg:px-16 xl:px-24 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-2 mb-4"
+          >
+            Build Your{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">
+              Career with Us
+            </span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-dark-5 max-w-3xl mx-auto leading-relaxed text-sm md:text-base"
+          >
+            A career with us brings satisfaction, recognition, and financial growth.
+            Explore exciting opportunities and take your first step toward a rewarding
+            future with <strong>Bin Ali Medical Supplies</strong>.
+          </motion.p>
+        </div>
 
-      <div className="mx-auto max-w-[1400px] flex flex-col lg:flex-row gap-8 md:gap-12 items-stretch">
-        {/* Left: Form */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="flex-1 bg-white shadow-md rounded-2xl md:rounded-3xl p-6 md:p-8 border border-white/50"
-        >
-          <h3 className="text-xl md:text-2xl font-semibold text-dark-2 mb-3 text-center">
-            Apply for Job
-          </h3>
-          <div className="flex justify-center pb-3 md:pb-4">
-            <motion.div
-              className="w-12 md:w-14 h-1 rounded-full bg-primary"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            />
-          </div>
-          
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {error && (
-              <div className="text-red-600 bg-red-50 border border-red-100 p-3 rounded-lg text-sm">
-                {error}
-              </div>
-            )}
-
-            {/* Name */}
-            <div>
-              <label className="block text-dark-4 font-medium mb-2">Your Name</label>
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="Enter your name"
-                className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-50/50 hover:bg-white shadow-sm"
+        {/* Form + Image */}
+        <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+          {/* LEFT: Form */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex-1 bg-white shadow-md rounded-2xl md:rounded-3xl p-6 md:p-8 border border-white/50"
+          >
+            <h3 className="text-xl md:text-2xl font-semibold text-dark-2 mb-3 text-center">
+              Apply for Job
+            </h3>
+            <div className="flex justify-center pb-4">
+              <motion.div
+                className="w-14 h-1 rounded-full bg-primary"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
               />
             </div>
 
-            {/* Email */}
-            <div>
-              <label className="block text-dark-4 font-medium mb-2">Email</label>
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="Enter your email"
-                className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-50/50 hover:bg-white shadow-sm"
-              />
-            </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              {error && (
+                <div className="text-red-600 bg-red-50 border border-red-100 p-3 rounded-lg text-sm">
+                  {error}
+                </div>
+              )}
 
-            {/* Phone */}
-            <div>
-              <label className="block text-dark-4 font-medium mb-2">Phone Number</label>
-              <input
-                type="text"
-                name="phone"
-                value={form.phone}
-                onChange={handleChange}
-                placeholder="Enter your phone number"
-                className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-50/50 hover:bg-white shadow-sm"
-              />
-            </div>
-
-            {/* Cover Letter */}
-            <div>
-              <label className="block text-dark-4 font-medium mb-2">Cover Letter</label>
-              <textarea
-                name="coverLetter"
-                value={form.coverLetter}
-                onChange={handleChange}
-                placeholder="Write your cover letter..."
-                rows={4}
-                className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-50/50 hover:bg-white shadow-sm resize-vertical"
-              />
-            </div>
-
-            {/* Resume Upload */}
-            <div>
-              <label className="block text-dark-4 font-medium mb-2">
-                Add Resume
-                <span className="text-xs text-gray-500 ml-2">
-                  (doc, docx, pdf, xls, xlsx)
-                </span>
-              </label>
-              <div className="flex items-center gap-3 border border-gray-200 rounded-lg p-3 bg-gray-50/50 hover:bg-white transition-all duration-300 shadow-sm">
-                <FaUpload className="text-primary text-base" />
+              {/* Name */}
+              <div>
+                <label className="block text-dark-4 font-medium mb-2">
+                  Your Name
+                </label>
                 <input
-                  type="file"
-                  name="resume"
-                  accept=".doc,.docx,.pdf,.xls,.xlsx"
+                  type="text"
+                  name="name"
+                  value={form.name}
                   onChange={handleChange}
-                  ref={fileInputRef}
-                  className="flex-1 text-sm cursor-pointer text-dark-4 file:hidden bg-transparent"
+                  placeholder="Enter your name"
+                  className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all bg-gray-50/50 hover:bg-white shadow-sm"
                 />
-                <span className="text-xs text-gray-500 whitespace-nowrap">
-                  Browse files
-                </span>
               </div>
-              {form.resume && (
-                <p className="text-sm text-green-600 mt-2 flex items-center gap-2">
-                  📄 <strong>{form.resume.name}</strong>
-                </p>
-              )}
-            </div>
 
-            {/* Submit Button */}
-            <div className="pt-4 text-center">
-              <button
-                type="submit"
-                disabled={sending}
-                className="bg-gradient-to-r from-primary to-primary-light cursor-pointer text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed hover:scale-105 active:scale-95 min-w-[180px]"
-              >
-                {sending ? "Submitting..." : "Submit Application"}
-              </button>
-              {success && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-green-700 bg-green-50 border border-green-100 p-3 rounded-lg text-sm mt-3"
+              {/* Email */}
+              <div>
+                <label className="block text-dark-4 font-medium mb-2">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email"
+                  className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all bg-gray-50/50 hover:bg-white shadow-sm"
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label className="block text-dark-4 font-medium mb-2">
+                  Phone Number
+                </label>
+                <input
+                  type="text"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="Enter your phone number"
+                  className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all bg-gray-50/50 hover:bg-white shadow-sm"
+                />
+              </div>
+
+              {/* Cover Letter */}
+              <div>
+                <label className="block text-dark-4 font-medium mb-2">
+                  Cover Letter
+                </label>
+                <textarea
+                  name="coverLetter"
+                  value={form.coverLetter}
+                  onChange={handleChange}
+                  placeholder="Write your cover letter..."
+                  rows={4}
+                  className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all bg-gray-50/50 hover:bg-white shadow-sm resize-vertical"
+                />
+              </div>
+
+              {/* Resume Upload */}
+              <div>
+                <label className="block text-dark-4 font-medium mb-2">
+                  Add Resume{" "}
+                  <span className="text-xs text-gray-500 ml-2">
+                    (doc, docx, pdf, xls, xlsx)
+                  </span>
+                </label>
+                <div className="flex items-center gap-3 border border-gray-200 rounded-lg p-3 bg-gray-50/50 hover:bg-white transition-all shadow-sm">
+                  <FaUpload className="text-primary text-base" />
+                  <input
+                    type="file"
+                    name="resume"
+                    accept=".doc,.docx,.pdf,.xls,.xlsx"
+                    onChange={handleChange}
+                    ref={fileInputRef}
+                    className="flex-1 text-sm cursor-pointer text-dark-4 file:hidden bg-transparent"
+                  />
+                  <span className="text-xs text-gray-500 whitespace-nowrap">
+                    Browse files
+                  </span>
+                </div>
+                {form.resume && (
+                  <p className="text-sm text-green-600 mt-2 flex items-center gap-2">
+                    📄 <strong>{form.resume.name}</strong>
+                  </p>
+                )}
+              </div>
+
+              {/* Submit */}
+              <div className="pt-4 text-center">
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
                 >
-                  ✅ Application sent successfully
-                </motion.div>
-              )}
-            </div>
-          </form>
-        </motion.div>
+                  {sending ? "Submitting..." : "Submit Application"}
+                </button>
 
-        {/* Right: Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="flex-1 flex items-stretch min-h-[400px] md:min-h-[500px]"
-        >
-          <div className="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
-            <Image
-              src="/team.png"
-              alt="Career Opportunities"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-              priority={false}
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-500/20 flex items-center justify-center">
-              <div className="text-center text-white p-6">
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Join Our Team</h3>
-                <p className="text-base md:text-lg opacity-90">
-                  Be part of a growing medical supplies company that values
-                  innovation and excellence.
-                </p>
+                {success && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="text-green-700 bg-green-50 border border-green-100 p-3 rounded-lg text-sm mt-3"
+                  >
+                    ✅ Application sent successfully
+                  </motion.div>
+                )}
+              </div>
+            </form>
+          </motion.div>
+
+          {/* RIGHT: Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex-1 flex items-stretch min-h-[420px] md:min-h-[500px]"
+          >
+            <div className="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
+              <Image
+                src="/team.png"
+                alt="Career Opportunities"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary-light/20 flex items-center justify-center">
+                <div className="text-center text-white p-6">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                    Join Our Team
+                  </h3>
+                  <p className="text-base md:text-lg opacity-90">
+                    Be part of a growing company that values innovation and
+                    excellence in healthcare.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Decorative elements - Only show on larger screens */}
-      <div className="hidden md:block absolute left-0 bottom-0 opacity-10">
+      {/* Decorative elements */}
+      <div className="absolute left-0 bottom-0 opacity-10 hidden md:block">
         <img src="/demo-medical-pattern.svg" alt="pattern" className="w-32 h-32" />
       </div>
-      <div className="hidden md:block absolute right-0 -top-10 opacity-80">
+      <div className="absolute right-0 -top-10 opacity-80 hidden md:block">
         <img src="/shape.png" alt="shape" className="w-full h-24" />
       </div>
     </section>

@@ -1,10 +1,10 @@
 "use client";
 
-import contactbg from "../../../../../public/contactbg1.png";
+import contactbg from "../../../../../public/contactbg.png";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export const ContactUs = () => {
+export const PartnersHero = () => {
   return (
     <>
       {/* Top Banner - Optimized */}
@@ -28,7 +28,7 @@ export const ContactUs = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold"
           >
-            Get In Touch With Us
+            Our Partners
           </motion.h1>
 
           <motion.div
@@ -49,7 +49,7 @@ export const ContactUs = () => {
             <Link href="/" className="hover:underline">
               Home
             </Link>{" "}
-            / <span>Contact</span>
+            / <span>Partners</span>
           </motion.div>
         </div>
       </motion.section>

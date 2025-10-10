@@ -31,7 +31,7 @@ export const AboutUs = () => {
 
         {/* Divider */}
         <motion.div
-          className="w-20 h-1 bg-white/90 rounded-full mx-auto"
+          className="w-20 h-1 bg-primary rounded-full mx-auto"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}

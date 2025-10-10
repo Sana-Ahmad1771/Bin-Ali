@@ -70,6 +70,7 @@ export default function OurProducts() {
               { title: "Metrex", img: "/metrex.png" },
               { title: "HerniaMesh", img: "/herniamesh.png" },
               { title: "Barray", img: "/barray.png" },
+              
             ].map((item, idx) => (
               <SwiperSlide key={idx}>
                 <motion.div

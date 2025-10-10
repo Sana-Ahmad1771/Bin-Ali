@@ -12,6 +12,7 @@ import ProofSection from "./components/pages/home/ProofSection";
 import MissionSection from "./components/pages/home/MissionSection";
 import WhyChooseUs from "./components/pages/home/WhyChooseUs";
 import TestimonialsSection from "./components/pages/home/TestimonialSection";
+import OurPart from "./components/pages/home/OurPart";
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ export default function Home() {
       <Hero />
       <WelcomeSection />
       <OurProducts />
-      {/* <ProcessSection /> */}
       <CeoMessage />
+      <OurPart />
       <WhyChooseUs />
       <MissionSection />
       {/* <ProductShowcase /> */}
