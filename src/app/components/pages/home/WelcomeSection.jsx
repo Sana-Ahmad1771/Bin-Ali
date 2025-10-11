@@ -69,7 +69,7 @@ export default function WelcomeSection() {
                 alt="Omar Ali"
                 width={50}
                 height={50}
-                className="rounded-full object-cover"
+                className="rounded-full h-auto w-auto object-cover"
               />
               <div>
                 <p className="text-dark-2 font-semibold leading-tight">Omar Ali</p>

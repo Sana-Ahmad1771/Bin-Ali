@@ -6,6 +6,7 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
+import Link from "next/link";
 
 const slides = [
   {
@@ -38,6 +39,7 @@ export default function HeroSlider() {
     <section
       className="relative w-full overflow-hidden"
       style={{ minHeight: "calc(100vh - 120px)" }}
+      aria-label="Hero Slider showcasing main company highlights"
     >
       <Swiper
         modules={[Autoplay, Navigation, EffectFade]}
@@ -46,7 +48,7 @@ export default function HeroSlider() {
           prevEl: ".hero-prev",
           nextEl: ".hero-next",
         }}
-        loop
+        loop={false} // ❗ Important: ensures first slide (H1) stays first in DOM
         effect="fade"
         fadeEffect={{ crossFade: true }}
         speed={1200}
@@ -62,6 +64,8 @@ export default function HeroSlider() {
                   activeIndex === index ? "scale-110" : "scale-100"
                 }`}
                 style={{ backgroundImage: `url(${slide.image})` }}
+                role="img"
+                aria-label={slide.title}
               ></div>
 
               {/* Overlay */}
@@ -71,15 +75,22 @@ export default function HeroSlider() {
               <div className="relative z-10 w-full">
                 <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24">
                   <div className="max-w-3xl text-center md:text-left">
-                    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
-                      {slide.title}
-                    </h1>
+                    {index === 0 ? (
+                      <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
+                        {slide.title}
+                      </h1>
+                    ) : (
+                      <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
+                        {slide.title}
+                      </h2>
+                    )}
                     <p className="text-white/90 mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
                       {slide.desc}
                     </p>
-                    <button className="cssbuttons-io mt-6">
+
+                    <Link href="/about" className="cssbuttons-io mt-6 inline-block">
                       <span>MORE ABOUT US</span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -109,10 +120,16 @@ export default function HeroSlider() {
       {/* Navigation + Caption */}
       <div className="absolute right-0 bottom-0 z-20 w-[90%] sm:w-auto">
         <div className="flex items-center">
-          <button className="hero-prev p-4 text-primary bg-white border-r border-primary cursor-pointer hover:bg-gray-100">
+          <button
+            className="hero-prev p-4 text-primary bg-white border-r border-primary cursor-pointer hover:bg-gray-100"
+            aria-label="Previous slide"
+          >
             <FaArrowLeftLong />
           </button>
-          <button className="hero-next p-4 text-primary bg-white cursor-pointer hover:bg-gray-100">
+          <button
+            className="hero-next p-4 text-primary bg-white cursor-pointer hover:bg-gray-100"
+            aria-label="Next slide"
+          >
             <FaArrowRightLong />
           </button>
         </div>
@@ -123,13 +140,13 @@ export default function HeroSlider() {
             <span className="text-primary font-bold text-base sm:text-lg">
               0{activeIndex + 1}.
             </span>
-            <h3 className="text-gray-800 font-semibold text-xs sm:text-sm md:text-base">
+            <p className="text-gray-800 font-semibold text-xs sm:text-sm md:text-base">
               {slides[activeIndex].caption}
-            </h3>
+            </p>
           </div>
           <img
             src={slides[activeIndex].image}
-            alt="preview"
+            alt={`Preview ${activeIndex + 1}`}
             className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-md"
           />
         </div>

@@ -78,7 +78,7 @@ export default function BiomedicalTeam() {
           {/* Main Image */}
           <div className="rounded-xl overflow-hidden shadow-lg relative z-10 max-w-[600px] lg:max-w-[700px]">
             <Image
-              src="/team.png"
+              src="/team-11.png"
               alt="Biomedical Team"
               width={700}
               height={800}

@@ -3,7 +3,7 @@
 import productsbg from "../../../../../public/products-bg2.png";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 export const Products = () => {
   return (

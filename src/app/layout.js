@@ -12,25 +12,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// ✅ Global metadata (applies to all pages by default)
 export const metadata = {
   metadataBase: new URL("https://binali.com"),
   title: {
-    default: "Bin Ali | Medical Equipment & Healthcare Solutions in Pakistan",
+    default: "Bin Ali | Medical Equipment & Healthcare Solutions in UAE",
     template: "%s | Bin Ali",
   },
   description:
-    "Bin Ali provides premium medical equipment, healthcare technology, and partnership opportunities across Pakistan. Explore our trusted brands, modern healthcare tools, and reliable services.",
+    "Bin Ali offers premium medical equipment, healthcare technology, and trusted solutions across the UAE for better care and innovation.",
   keywords: [
     "Bin Ali",
-    "medical equipment Pakistan",
+    "medical equipment UAE",
     "healthcare solutions",
     "hospital supplies",
     "medical technology",
-    "partnerships in healthcare",
   ],
-  authors: [{ name: "Bin Ali Medical" }],
-  creator: "Bin Ali Medical",
-  publisher: "Bin Ali Medical",
   robots: {
     index: true,
     follow: true,
@@ -38,35 +35,40 @@ export const metadata = {
   alternates: {
     canonical: "https://binali.com",
   },
+
+  // ✅ Global Open Graph (auto-fallback for all pages)
   openGraph: {
     type: "website",
-    locale: "en_PK",
+    locale: "en_AE",
     url: "https://binali.com",
     siteName: "Bin Ali Medical",
-    title: "Bin Ali | Medical Equipment & Healthcare Solutions in Pakistan",
+    title: "Bin Ali | Medical Equipment & Healthcare Solutions in UAE",
     description:
-      "Leading medical equipment and healthcare solutions provider in Pakistan. Explore Bin Ali’s trusted medical products, partnerships, and technology.",
+      "Leading provider of medical equipment and healthcare technology in the UAE.",
     images: [
       {
-        url: "/og-image.jpg", // 🖼️ Place og-image.jpg in /public folder
+        url: "/og/home.png", // ✅ fallback OG image (keep this universal)
         width: 1200,
         height: 630,
-        alt: "Bin Ali Medical - Healthcare Equipment Provider",
+        alt: "Bin Ali Medical - Healthcare Solutions in UAE",
       },
     ],
   },
+
+  // ✅ Twitter Card fallback
   twitter: {
     card: "summary_large_image",
     title: "Bin Ali | Medical Equipment & Healthcare Solutions",
     description:
-      "Trusted healthcare and medical technology provider in Pakistan — explore products and partnerships with Bin Ali.",
-    creator: "@binali", // optional — replace with your Twitter handle
+      "Trusted provider of medical equipment and healthcare technology in the UAE.",
     images: ["/og-image.jpg"],
   },
+
+  // ✅ Favicon setup (applies site-wide)
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    apple: "/favicon.ico",
   },
 };
 
@@ -78,7 +80,7 @@ export default function RootLayout({ children }) {
       >
         {children}
 
-        {/* ✅ Google Analytics or Tag Manager (replace IDs when ready) */}
+        {/* ✅ Google Analytics / Tag Manager placeholder */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
           strategy="afterInteractive"
