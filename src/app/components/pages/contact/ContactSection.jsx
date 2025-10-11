@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function ContactSection() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
@@ -64,7 +69,9 @@ export default function ContactSection() {
               )}
 
               <div>
-                <label className="block text-dark-4 font-medium mb-2">Your Name</label>
+                <label className="block text-dark-4 font-medium mb-2">
+                  Your Name
+                </label>
                 <input
                   name="name"
                   value={form.name}
@@ -76,7 +83,9 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-dark-4 font-medium mb-2">Your Email</label>
+                <label className="block text-dark-4 font-medium mb-2">
+                  Your Email
+                </label>
                 <input
                   name="email"
                   value={form.email}
@@ -88,7 +97,9 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-dark-4 font-medium mb-2">Phone Number</label>
+                <label className="block text-dark-4 font-medium mb-2">
+                  Phone Number
+                </label>
                 <input
                   name="phone"
                   value={form.phone}
@@ -100,7 +111,9 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-dark-4 font-medium mb-2">Message</label>
+                <label className="block text-dark-4 font-medium mb-2">
+                  Message
+                </label>
                 <textarea
                   name="message"
                   value={form.message}
@@ -115,9 +128,15 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="bg-gradient-to-r from-primary to-primary-light cursor-pointer text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
+                  className="relative bg-gradient-to-r from-primary to-primary-light cursor-pointer text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.03] active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed overflow-hidden group"
                 >
-                  {sending ? "Sending..." : "Send Message"}
+                  {/* Sliding overlay effect */}
+                  <span className="absolute inset-0 bg-[rgba(255,255,255,0.12)] skew-x-[30deg] -left-[10%] w-[120%] h-full transition-transform duration-250 ease-in-out transform translate-x-0 group-hover:translate-x-full"></span>
+
+                  {/* Text content */}
+                  <span className="relative z-10">
+                    {sending ? "Sending..." : "Send Message"}
+                  </span>
                 </button>
 
                 {success && (
@@ -141,7 +160,8 @@ export default function ContactSection() {
           {[
             {
               city: "Abu Dhabi",
-              address: "Office 601, Mazyad Mall Tower 1, Mohammed Bin Zayed City, Musaffah",
+              address:
+                "Office 601, Mazyad Mall Tower 1, Mohammed Bin Zayed City, Musaffah",
               phone: ["+971-2-6760555", "+971-2-6760888"],
               email: "info@binalimed.com",
             },
@@ -192,7 +212,12 @@ export default function ContactSection() {
         <img src="/demo-medical-pattern.svg" alt="pattern" loading="lazy" />
       </div>
       <div className="absolute right-0 -top-10 opacity-80 animate-bounce-smooth">
-        <img src="/shape.png" alt="shape" className="w-full h-auto" loading="lazy" />
+        <img
+          src="/shape.png"
+          alt="shape"
+          className="w-full h-auto"
+          loading="lazy"
+        />
       </div>
     </section>
   );

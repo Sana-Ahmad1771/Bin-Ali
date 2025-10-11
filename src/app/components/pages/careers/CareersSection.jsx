@@ -78,9 +78,10 @@ export default function CareersSection() {
             viewport={{ once: true }}
             className="text-dark-5 max-w-3xl mx-auto leading-relaxed text-sm md:text-base"
           >
-            A career with us brings satisfaction, recognition, and financial growth.
-            Explore exciting opportunities and take your first step toward a rewarding
-            future with <strong>Bin Ali Medical Supplies</strong>.
+            A career with us brings satisfaction, recognition, and financial
+            growth. Explore exciting opportunities and take your first step
+            toward a rewarding future with{" "}
+            <strong>Bin Ali Medical Supplies</strong>.
           </motion.p>
         </div>
 
@@ -131,7 +132,9 @@ export default function CareersSection() {
 
               {/* Email */}
               <div>
-                <label className="block text-dark-4 font-medium mb-2">Email</label>
+                <label className="block text-dark-4 font-medium mb-2">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -206,9 +209,15 @@ export default function CareersSection() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
+                  className="relative bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.03] active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed overflow-hidden group"
                 >
-                  {sending ? "Submitting..." : "Submit Application"}
+                  {/* Hover Sweep Overlay */}
+                  <span className="absolute inset-0 bg-[rgba(255,255,255,0.15)] skew-x-[30deg] -left-[10%] w-[120%] h-full transition-transform duration-300 ease-in-out transform translate-x-0 group-hover:translate-x-full"></span>
+
+                  {/* Button Text */}
+                  <span className="relative z-10">
+                    {sending ? "Submitting..." : "Submit Application"}
+                  </span>
                 </button>
 
                 {success && (
@@ -259,7 +268,11 @@ export default function CareersSection() {
 
       {/* Decorative elements */}
       <div className="absolute left-0 bottom-0 opacity-10 hidden md:block">
-        <img src="/demo-medical-pattern.svg" alt="pattern" className="w-32 h-32" />
+        <img
+          src="/demo-medical-pattern.svg"
+          alt="pattern"
+          className="w-32 h-32"
+        />
       </div>
       <div className="absolute right-0 -top-10 opacity-80 hidden md:block">
         <img src="/shape.png" alt="shape" className="w-full h-24" />

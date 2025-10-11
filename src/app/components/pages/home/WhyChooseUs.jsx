@@ -156,7 +156,7 @@ export default function WhyChooseUs() {
       `}</style>
       {/* Decorative Right Shape */}
       <div
-        className="absolute z-10 top-0 right-0 h-full w-[40px] md:w-[60px] opacity-80 overflow-hidden pointer-events-none"
+        className="absolute z-10 top-0 right-0 h-full w-[40px] md:w-[60px] hidden lg:block opacity-80 overflow-hidden pointer-events-none"
         style={{
           backgroundImage: "url('/shape.png')",
           backgroundRepeat: "repeat-y",

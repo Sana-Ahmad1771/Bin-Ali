@@ -77,11 +77,8 @@ export default function HeroSlider() {
                     <p className="text-white/90 mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
                       {slide.desc}
                     </p>
-                    <button
-                      className="bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-3 px-8 rounded-xl 
-                      mt-6 sm:py-3 sm:px-10 text-sm sm:text-base transition-all duration-300 hover:scale-105 active:scale-95"
-                    >
-                      MORE ABOUT US
+                    <button className="cssbuttons-io mt-6">
+                      <span>MORE ABOUT US</span>
                     </button>
                   </div>
                 </div>

@@ -50,9 +50,13 @@ export default function Partnership() {
         >
           <Link
             href="/contact"
-            className="inline-block bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-4 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.05] active:scale-95"
+            className="relative inline-block bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-4 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.03] active:scale-95 overflow-hidden group"
           >
-            Contact Us for Partnership
+            {/* Sliding Overlay Effect */}
+            <span className="absolute inset-0 bg-[rgba(255,255,255,0.12)] skew-x-[30deg] -left-[10%] w-[120%] h-full transition-transform duration-250 ease-in-out transform translate-x-0 group-hover:translate-x-full"></span>
+
+            {/* Button Text */}
+            <span className="relative z-10">Contact Us for Partnership</span>
           </Link>
         </motion.div>
       </div>

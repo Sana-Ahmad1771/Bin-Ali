@@ -45,7 +45,11 @@ export default function NewsletterSection() {
             className="max-w-xl text-white/80 mt-3 mx-auto lg:mx-0 text-sm sm:text-base leading-relaxed"
           >
             Stay informed with the latest news, offers, and innovations from
-            <span className="font-semibold text-white"> Bin Ali Medical Supplies</span>.
+            <span className="font-semibold text-white">
+              {" "}
+              Bin Ali Medical Supplies
+            </span>
+            .
           </motion.p>
         </div>
 
@@ -71,10 +75,16 @@ export default function NewsletterSection() {
               />
               <button
                 type="submit"
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-2xl sm:rounded-r-full transition-all duration-300 whitespace-nowrap text-sm sm:text-base shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-95 min-h-[52px] sm:min-h-[60px]"
+                className="relative flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-2xl sm:rounded-r-full transition-all duration-200 whitespace-nowrap text-sm sm:text-base shadow-md hover:shadow-lg transform hover:scale-[1.03] active:scale-95 min-h-[52px] sm:min-h-[60px] overflow-hidden group"
               >
-                <span>Subscribe</span>
-                <FaPaperPlane className="text-xs sm:text-sm" />
+                {/* Faster overlay animation */}
+                <span className="absolute inset-0 bg-[rgba(255,255,255,0.12)] skew-x-[30deg] -left-[10%] w-[120%] h-full transition-transform duration-250 ease-in-out transform translate-x-0 group-hover:translate-x-full"></span>
+
+                {/* Text and icon */}
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Subscribe
+                  <FaPaperPlane className="text-xs sm:text-sm" />
+                </span>
               </button>
             </div>
           </form>
