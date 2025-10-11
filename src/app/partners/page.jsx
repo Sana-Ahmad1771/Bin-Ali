@@ -20,7 +20,7 @@ export const metadata = {
     siteName: "Bin Ali Medical Equipment",
     images: [
       {
-        url: "/og/partners.png",
+        url: "https://bin-ali.vercel.app/og/partners.png",
         width: 1200,
         height: 630,
         alt: "Bin Ali Partners UAE",

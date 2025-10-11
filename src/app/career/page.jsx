@@ -20,7 +20,7 @@ export const metadata = {
     siteName: "Bin Ali Medical Supplies LLC",
     images: [
       {
-        url: "/og/career.png", // 👈 ideally create a dedicated OG banner
+        url: "https://bin-ali.vercel.app/og/contact.png", 
         width: 1200,
         height: 630,
         alt: "Bin Ali Careers UAE",

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./components/pages/home/Hero";
 import Header from "./components/common/Header";
 import WelcomeSection from "./components/pages/home/WelcomeSection";
@@ -34,7 +33,7 @@ export const metadata = {
     siteName: "Bin Ali Medical Supplies LLC",
     images: [
       {
-        url: "/og/home.png",
+        url: "https://bin-ali.vercel.app/og/home.png",
         width: 1200,
         height: 630,
         alt: "Bin Ali Medical Equipment UAE",
