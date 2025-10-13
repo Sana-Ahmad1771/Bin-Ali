@@ -5,6 +5,7 @@ import MarketingSalesTeam from "../components/pages/aboutus/MarketingSalesTeam";
 import BiomedicalTeam from "../components/pages/aboutus/BioMedicalTeam";
 import { AboutUs } from "../components/pages/aboutus/AboutUs";
 import NewsletterSection from "../components/pages/home/NewsletterSection";
+import WhoWeAre from "../components/pages/aboutus/WhoWeAre";
 
 export const metadata = {
   title: "About Us | Bin Ali Medical Equipment UAE",
@@ -44,6 +45,7 @@ const Page = () => {
     <div>
       <Header />
       <AboutUs />
+      <WhoWeAre />
       <ValuesPrinciples />
       <MarketingSalesTeam />
       <BiomedicalTeam />

@@ -125,12 +125,14 @@ const Header = () => {
             </li>
             <li>
               <Link href="/products" className={navItemClass("/products")}>
-                Our Products <span className={navItemBorderClass("/products")} />
+                Our Products{" "}
+                <span className={navItemBorderClass("/products")} />
               </Link>
             </li>
             <li>
               <Link href="/partners" className={navItemClass("/partners")}>
-                Our Partners <span className={navItemBorderClass("/partners")} />
+                Our Partners{" "}
+                <span className={navItemBorderClass("/partners")} />
               </Link>
             </li>
             <li>
@@ -162,11 +164,17 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4 }}
-              className="fixed inset-0 bg-white z-50 px-6 pt-20"
+              className="fixed inset-0 bg-white z-50 px-6 pt-16"
             >
               <div className="flex justify-between items-center mb-6">
                 <Link href="/" onClick={closeMenu}>
-                  <Image src={Logo} width={130} height={40} alt="logo" />
+                  <Image
+                    src={Logo}
+                    width={130}
+                    height={40}
+                    alt="logo"
+                    className="w-auto h-14"
+                  />
                 </Link>
                 <button onClick={closeMenu} className="text-primary">
                   <IoCloseSharp size={30} />

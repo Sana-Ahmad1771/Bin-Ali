@@ -10,6 +10,7 @@ import MissionSection from "./components/pages/home/MissionSection";
 import WhyChooseUs from "./components/pages/home/WhyChooseUs";
 import TestimonialsSection from "./components/pages/home/TestimonialSection";
 import OurPart from "./components/pages/home/OurPart";
+import VisionSection from "./components/pages/home/VissionSection";
 
 export const metadata = {
   title: "Bin Ali | Medical Equipment & Healthcare Solutions in UAE",
@@ -62,6 +63,7 @@ export default function Home() {
       <OurPart />
       <WhyChooseUs />
       <MissionSection />
+      <VisionSection />
       <TestimonialsSection />
       <ProofSection />
       <NewsletterSection />

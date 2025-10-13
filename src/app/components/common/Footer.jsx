@@ -8,6 +8,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const [copied, setCopied] = useState(false);
@@ -81,12 +82,28 @@ const Footer = () => {
           viewport={{ once: true }}
           className="min-w-[200px]"
         >
-          <h3 className="text-xl font-semibold mb-5 text-dark-2">Quick Links</h3>
+          <h3 className="text-xl font-semibold mb-5 text-dark-2">
+            Quick Links
+          </h3>
           <ul className="space-y-3 text-[16px] text-gray-700">
-            <li><a href="#" className="hover:text-primary">Home</a></li>
-            <li><a href="#" className="hover:text-primary">About Us</a></li>
-            <li><a href="#" className="hover:text-primary">Products</a></li>
-            <li><a href="#" className="hover:text-primary">Contact Us</a></li>
+            <li>
+              <Link href="/" className="hover:text-primary">Home</Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:text-primary">About Us</Link>
+            </li>
+            <li>
+              <Link href="/products" className="hover:text-primary">Our Products</Link>
+            </li>
+            <li>
+              <Link href="/partners" className="hover:text-primary">Our Partners</Link>
+            </li>
+            <li>
+              <Link href="/career" className="hover:text-primary">Career</Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-primary">Contact</Link>
+            </li>
           </ul>
         </motion.div>
 
@@ -114,7 +131,9 @@ const Footer = () => {
           viewport={{ once: true }}
           className="flex-1 min-w-[220px] lg:max-w-[25%]"
         >
-          <h3 className="text-xl font-semibold mb-5 text-dark-2">Branch Offices</h3>
+          <h3 className="text-xl font-semibold mb-5 text-dark-2">
+            Branch Offices
+          </h3>
           <p className="mb-6 text-[16px] text-gray-700 leading-relaxed">
             Dubai - +971-4–4520022 <br />
             Al Ain - +971-3-7824596 <br />
@@ -146,7 +165,8 @@ const Footer = () => {
       >
         <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 flex flex-col lg:flex-row justify-between items-center gap-3 text-center">
           <p>
-            © {new Date().getFullYear()} Bin Ali Medical Supplies. All rights reserved.
+            © {new Date().getFullYear()} Bin Ali Medical Supplies. All rights
+            reserved.
           </p>
           <p className="text-sm sm:text-base">
             Privacy Policy | Terms & Conditions

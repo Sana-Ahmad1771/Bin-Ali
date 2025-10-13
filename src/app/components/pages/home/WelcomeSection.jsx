@@ -10,7 +10,11 @@ export default function WelcomeSection() {
         <div className="relative w-full lg:flex-1 flex lg:justify-start justify-center items-center z-30">
           {/* Top-right Decorative Shape */}
           <div className="absolute -top-10 -right-10 animate-bounce-smooth">
-            <img src="/shape.png" alt="decorative shape" className="rounded-md" />
+            <img
+              src="/shape.png"
+              alt="decorative shape"
+              className="rounded-md"
+            />
           </div>
 
           {/* Back Image */}
@@ -72,11 +76,16 @@ export default function WelcomeSection() {
                 className="rounded-full h-auto w-auto object-cover"
               />
               <div>
-                <p className="text-dark-2 font-semibold leading-tight">Omar Ali</p>
-                <p className="text-gray text-sm">CEO, Bin Ali Medical Supplies</p>
+                <p className="text-dark-2 font-semibold leading-tight">
+                  Omar Ali
+                </p>
+                <p className="text-gray text-sm">
+                  CEO, Bin Ali Medical Supplies
+                </p>
               </div>
             </div>
-
+            {/* contact */}
+            {/* contact */}
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                 <FaPhoneAlt />
@@ -85,7 +94,7 @@ export default function WelcomeSection() {
                 <p className="text-dark-2 font-semibold leading-tight">
                   +971-4-XXX-XXXX
                 </p>
-                <p className="text-gray text-sm">Contact Us Anytime</p>
+                <p className="text-gray text-sm">Sales & Customer Support</p>
               </div>
             </div>
           </div>

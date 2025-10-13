@@ -28,7 +28,7 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="relative min-h-[800px] sm:min-h[1000px] py-20 pb-20 sm:pb-24 md:pb-42 lg:pb-32 ">
+    <section className="relative min-h-[800px] sm:min-h[1000px] pb-20 sm:pb-24 md:pb-42 lg:pb-32 ">
      <div className="relative z-10"
      style={{
         backgroundImage: `url(${aboutbg.src})`,
