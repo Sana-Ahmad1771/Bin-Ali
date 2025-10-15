@@ -186,6 +186,7 @@ const Header = () => {
                   { href: "/", label: "Home" },
                   { href: "/about", label: "About Us" },
                   { href: "/products", label: "Our Products" },
+                  { href: "/partners", label: "Our Partners" },
                   { href: "/career", label: "Career" },
                   { href: "/contact", label: "Contact" },
                 ].map((item) => (
