@@ -92,7 +92,7 @@ export default function WelcomeSection() {
               </div>
               <div>
                 <p className="text-dark-2 font-semibold leading-tight">
-                  +971-4-XXX-XXXX
+                 +971- 2- 6760555
                 </p>
                 <p className="text-gray text-sm">Sales & Customer Support</p>
               </div>
