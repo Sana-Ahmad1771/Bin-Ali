@@ -77,7 +77,7 @@ export default function CeoMessage() {
 
           <div className="rounded-xl overflow-hidden shadow-lg relative z-10">
             <Image
-              src="/doc-7.png"
+              src="/ceo.png"
               alt="CEO Omar Ali"
               width={420}
               height={480}

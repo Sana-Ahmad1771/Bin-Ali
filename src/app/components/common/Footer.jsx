@@ -59,7 +59,7 @@ const Footer = () => {
                 onClick={() => onClickCopy("(239) 555-0108")}
                 className="cursor-pointer hover:underline underline-offset-4"
               >
-                (239) 555-0108
+                +971-4–4520022
               </span>
             </div>
             <div className="flex items-center gap-2">
@@ -68,7 +68,7 @@ const Footer = () => {
                 onClick={() => onClickCopy("info@binali.xyz")}
                 className="cursor-pointer hover:underline underline-offset-4"
               >
-                info@binali.xyz
+                info@binalimed.com
               </span>
             </div>
           </div>

@@ -69,7 +69,7 @@ export default function WelcomeSection() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 border-t border-gray-4 pt-6">
             <div className="flex items-center gap-3">
               <Image
-                src="/doc-7.png"
+                src="/ceo.png"
                 alt="Omar Ali"
                 width={50}
                 height={50}

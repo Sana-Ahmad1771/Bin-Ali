@@ -56,7 +56,7 @@ const Header = () => {
                 onClick={() => copyToClipboard("(239) 555-0108")}
                 className="cursor-pointer hover:underline underline-offset-4"
               >
-                (239) 555-0108
+               +971- 2- 6760555
               </span>
             </span>
             <span className="flex items-center gap-2">
@@ -65,7 +65,7 @@ const Header = () => {
                 onClick={() => copyToClipboard("info@binali.xyz")}
                 className="cursor-pointer hover:underline underline-offset-4"
               >
-                info@binali.xyz
+                info@binalimed.com
               </span>
             </span>
           </div>
