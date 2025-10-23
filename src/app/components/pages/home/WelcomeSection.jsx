@@ -20,7 +20,7 @@ export default function WelcomeSection() {
           {/* Back Image */}
           <div className="rounded-xl overflow-hidden shadow-lg relative z-20 w-[260px] sm:w-[340px] md:w-[520px]">
             <Image
-              src="/doc-1.png"
+              src="/doc-1.jpg"
               alt="Medical team"
               width={420}
               height={420}
@@ -31,7 +31,7 @@ export default function WelcomeSection() {
           {/* Front Image */}
           <div className="absolute z-30 -bottom-6 -right-4 md:-bottom-10 md:-right-10 bg-white rounded-2xl shadow-xl p-2">
             <Image
-              src="/doc-2.png"
+              src="/doc-2.jpg"
               alt="Doctor"
               width={280}
               height={280}
@@ -69,7 +69,7 @@ export default function WelcomeSection() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 border-t border-gray-4 pt-6">
             <div className="flex items-center gap-3">
               <Image
-                src="/ceo.png"
+                src="/ceo.jpg"
                 alt="Omar Ali"
                 width={50}
                 height={50}

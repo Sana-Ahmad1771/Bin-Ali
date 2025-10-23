@@ -67,7 +67,7 @@ export default function MissionSection() {
 
           <div className="rounded-2xl overflow-hidden shadow-lg relative z-10">
             <Image
-              src="/team1.png"
+              src="/team1.jpg"
               alt="Our Mission"
               width={500}
               height={450}

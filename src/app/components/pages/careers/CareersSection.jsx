@@ -243,7 +243,7 @@ export default function CareersSection() {
           >
             <div className="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden shadow-lg">
               <Image
-                src="/team.png"
+                src="/team.jpg"
                 alt="Career Opportunities"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

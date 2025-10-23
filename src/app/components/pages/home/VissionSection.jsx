@@ -17,7 +17,7 @@ export default function VisionSection() {
           {/* Row 1 */}
           <div className="relative w-full h-32 sm:h-36 md:h-40 lg:h-44 rounded-xl overflow-hidden">
             <Image
-              src="/team6.png"
+              src="/team6.jpg"
               alt="Healthcare Excellence"
               fill
               className="object-cover"
@@ -26,7 +26,7 @@ export default function VisionSection() {
 
           <div className="relative w-full h-32 sm:h-36 md:h-40 lg:h-44 rounded-xl overflow-hidden">
             <Image
-              src="/uniform1.png"
+              src="/uniform1.jpg"
               alt="sterliazation"
               fill
               className="object-cover rounded-xl"
@@ -43,7 +43,7 @@ export default function VisionSection() {
 
           <div className="relative w-full h-32 sm:h-36 md:h-40 lg:h-44 rounded-xl overflow-hidden">
             <Image
-              src="/team3.png"
+              src="/team3.jpg"
               alt="Modern Equipment"
               fill
               className="object-cover"
@@ -60,7 +60,7 @@ export default function VisionSection() {
 
           <div className="relative w-full h-32 sm:h-36 md:h-40 lg:h-44 rounded-xl overflow-hidden">
             <Image
-              src="/doc-4.png"
+              src="/doc-4.jpg"
               alt="Advanced Labs"
               fill
               className="object-cover rounded-xl"
@@ -69,7 +69,7 @@ export default function VisionSection() {
 
           <div className="relative w-full h-32 sm:h-36 md:h-40 lg:h-44 rounded-xl overflow-hidden">
             <Image
-              src="/team5.png"
+              src="/team5.jpg"
               alt="Team Excellence"
               fill
               className="object-cover"

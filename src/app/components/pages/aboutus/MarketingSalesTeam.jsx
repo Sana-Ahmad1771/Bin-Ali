@@ -23,7 +23,7 @@ export default function MarketingSalesTeam() {
           {/* Main Image */}
           <div className="rounded-xl overflow-hidden shadow-lg relative z-10 max-w-[600px] lg:max-w-[700px]">
             <Image
-              src="/team2.png"
+              src="/team2.jpg"
               alt="Marketing & Sales Team"
               width={700}
               height={800}
