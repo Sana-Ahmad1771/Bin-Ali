@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Bin Ali Medical Supplies LLC",
     images: [
       {
-        url: "https://bin-ali.vercel.app/og/about.png", 
+        url: "https://bin-ali.vercel.app/og/about.jpg", 
         width: 1200,
         height: 630,
         alt: "About Bin Ali Medical",
