@@ -72,7 +72,7 @@ export default function TestimonialSection() {
 
           {/* Swiper Carousel */}
           <Swiper
-             modules={[Autoplay, Pagination, FreeMode]}
+            modules={[Autoplay, Pagination, FreeMode]}
             freeMode={true}
             loop={true}
             grabCursor={true}
@@ -95,12 +95,12 @@ export default function TestimonialSection() {
           >
             {testimonials.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col justify-between items-center text-center w-full h-[370px] sm:h-[390px] md:h-[340px]">
-                  {/* Border Glow (restored) */}
+                <div className="relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col items-center text-center w-full min-h-[360px] sm:min-h-[380px] md:min-h-[400px] lg:min-h-[420px] h-auto">
+                  {/* Border Glow */}
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-primary)] to-[var(--color-primary-light)] animate-borderGlow"></div>
 
                   {/* Image */}
-                  <div className="flex items-center justify-center mb-4 sm:mb-6">
+                  <div className="flex items-center justify-center mb-4 sm:mb-5">
                     <div className="bg-gradient-to-r from-[var(--color-primary-light)] via-[var(--color-primary)] to-[var(--color-primary-light)] p-[2px] rounded-xl">
                       <div className="bg-white rounded-lg p-2 flex items-center justify-center">
                         <Image
@@ -113,13 +113,14 @@ export default function TestimonialSection() {
                       </div>
                     </div>
                   </div>
+
                   {/* Text */}
-                  <p className="text-gray-600 text-sm md:text-base mb-6 leading-relaxed max-w-[90%] mx-auto flex-grow">
+                  <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed max-w-[90%] mx-auto">
                     “{item.text}”
                   </p>
 
                   {/* Name / Role */}
-                  <div>
+                  <div className="mt-auto">
                     <h4 className="font-semibold text-[#13171f] text-sm sm:text-base">
                       {item.name}
                     </h4>
