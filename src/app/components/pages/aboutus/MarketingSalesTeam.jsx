@@ -21,13 +21,13 @@ export default function MarketingSalesTeam() {
           </div>
 
           {/* Main Image */}
-          <div className="rounded-xl overflow-hidden shadow-lg relative z-10 max-w-[600px] lg:max-w-[700px]">
+          <div className="rounded-xl overflow-hidden lg:h-[900px] shadow-lg relative z-10 max-w-[600px] lg:max-w-[700px]">
             <Image
               src="/team2.jpg"
               alt="Marketing & Sales Team"
               width={700}
               height={800}
-              className="rounded-xl w-full h-auto object-cover"
+              className="rounded-xl w-full h-full object-cover"
             />
           </div>
         </motion.div>
@@ -53,14 +53,20 @@ export default function MarketingSalesTeam() {
 
           <div className="space-y-4 text-dark-5 leading-relaxed mb-8">
             <p>
-              The team is led by <strong>Aji Mohammed</strong>, Master in Commerce,
-              supported by <strong>22 sales staff</strong> and <strong>5 marketing staff</strong>,
-              all highly experienced and trained in their respective fields.
+              Our Sales and Marketing divisions are driven by a dynamic and expanding team 
+              of professionals who continuously deliver excellence and innovation in every project.
             </p>
+
             <p>
-              Our product specialist, <strong>Dr. Jaya Thomas</strong> (Masters in Pharmacy),
-              brings over <strong>15 years</strong> of practical experience. The team is further
-              strengthened by a capable logistics and support staff ensuring smooth operations.
+              The Sales Team is led by <strong>Mohammad Shan</strong> (Dubai) and{" "}
+              <strong>Naisam Maliya</strong> (Abu Dhabi), while the Marketing Team is 
+              headed by <strong>Abhilash</strong> (Abu Dhabi) and <strong>Ebin Baby</strong> (Dubai).
+            </p>
+
+            <p>
+              Together, they ensure efficient coordination, customer satisfaction, 
+              and strategic market growth with the support of a large, experienced workforce 
+              dedicated to maintaining the company’s reputation for quality and reliability.
             </p>
 
             <ul className="list-disc pl-5 space-y-2 text-dark-5">
@@ -83,9 +89,9 @@ export default function MarketingSalesTeam() {
               </div>
               <div>
                 <p className="text-dark-2 font-semibold leading-tight">
-                  Bin Ali Sales Team
+                  Sales Team Leadership
                 </p>
-                <p className="text-gray text-sm">Committed to service excellence</p>
+                <p className="text-gray text-sm">Focused on customer satisfaction & growth</p>
               </div>
             </div>
 
@@ -95,9 +101,9 @@ export default function MarketingSalesTeam() {
               </div>
               <div>
                 <p className="text-dark-2 font-semibold leading-tight">
-                  Operational Support
+                  Marketing & Operations
                 </p>
-                <p className="text-gray text-sm">Efficient logistics & management</p>
+                <p className="text-gray text-sm">Delivering creative strategies & strong support</p>
               </div>
             </div>
           </div>

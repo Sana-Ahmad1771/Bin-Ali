@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 const WhoWeAre = () => {
   return (
     <motion.section
-      className="py-20 px-4 sm:px-6 lg:px-16 xl:px-28 bg-white"
+      className="py-20 bg-white"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
       viewport={{ once: true }}
     >
       {/* Main Container - Matches Header Alignment */}
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24">
         {/* Row: Text Left / Image Right */}
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-16 mb-16">
           {/* Left - Text */}

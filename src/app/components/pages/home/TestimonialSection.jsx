@@ -89,7 +89,7 @@ export default function TestimonialSection() {
             }}
             breakpoints={{
               640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              1024: { slidesPerView: 2 },
             }}
             className="!px-4 sm:!px-0 testimonial-swiper"
           >

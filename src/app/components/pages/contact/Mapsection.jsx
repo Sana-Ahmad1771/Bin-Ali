@@ -3,7 +3,7 @@ import React from "react";
 
 const MapSection = () => {
   return (
-    <section className="relative bg-[#F8FBFF] py-20 px-5 lg:px-42 xl:px-53 overflow-hidden">
+    <section className="relative max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 bg-white py-20 overflow-hidden">
       {/* Heading */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-dark-2 mb-4">

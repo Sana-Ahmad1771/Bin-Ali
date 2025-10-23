@@ -70,7 +70,7 @@ export default function NewsletterSection() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full sm:min-w-[280px] md:min-w-[320px] lg:min-w-[360px] xl:min-w-[400px] bg-transparent py-3 sm:py-4 px-4 sm:px-6 text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary rounded-2xl sm:rounded-l-full sm:rounded-r-none text-base placeholder-gray-500"
+                className="w-full sm:min-w-[280px] md:min-w-[320px] lg:min-w-[310px] xl:min-w-[320px] bg-transparent py-3 sm:py-4 px-4 sm:px-6 text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary rounded-2xl sm:rounded-l-full sm:rounded-r-none text-base placeholder-gray-500"
                 required
               />
               <button
