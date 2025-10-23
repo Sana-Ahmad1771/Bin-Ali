@@ -66,10 +66,10 @@ export default function OurPart() {
         slidesPerView: 3,
         spaceBetween: 10,
       },
-      480: { 
-        slidesPerView: 4, 
-        spaceBetween: 12
-       },
+      480: {
+        slidesPerView: 4,
+        spaceBetween: 12,
+      },
       640: {
         slidesPerView: 4,
         spaceBetween: 16,
@@ -142,7 +142,7 @@ export default function OurPart() {
                     alt={item.title}
                     width={150}
                     height={100}
-                    className="object-contain w-full h-full"
+                    className="object-contain w-full h-full filter grayscale transition-all duration-300 hover:grayscale-0"
                   />
                 </div>
                 <h4 className="text-[10px] sm:text-xs md:text-sm font-medium text-dark-2 truncate max-w-[100px] sm:max-w-[120px] md:max-w-[140px] mt-2">
@@ -171,7 +171,7 @@ export default function OurPart() {
                     alt={item.title}
                     width={150}
                     height={100}
-                    className="object-contain w-full h-full"
+                    className="object-contain w-full h-full opacity-60 hover:opacity-100 transition duration-300 filter grayscale hover:grayscale-0"
                   />
                 </div>
                 <h4 className="text-[10px] sm:text-xs md:text-sm font-medium text-dark-2 truncate max-w-[100px] sm:max-w-[120px] md:max-w-[140px] mt-2">

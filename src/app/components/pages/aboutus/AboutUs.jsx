@@ -1,6 +1,6 @@
 "use client";
 
-import aboutbg from "../../../../../public/aboutusbg.png";
+import aboutbg from "../../../../../public/aboutusbg.jpg";
 import { motion } from "framer-motion";
 import Link from "next/link";
 

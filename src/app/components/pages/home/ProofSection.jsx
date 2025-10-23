@@ -1,79 +1,107 @@
 "use client";
-import { motion } from "framer-motion";
-import { FaRegStar } from "react-icons/fa";
-import { GiThreeFriends } from "react-icons/gi";
-import { FaGlobe } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import {
+  FaHospitalUser,
+  FaBoxesStacked,
+  FaCertificate,
+  FaCalendarCheck,
+} from "react-icons/fa6";
 
 const stats = [
   {
     id: 1,
-    icon: <FaRegStar size={40} className="text-primary" />,
-    value: "2631+",
-    label: "HAPPY CLIENTS",
+    icon: <FaCalendarCheck className="text-primary" size={25} />,
+    value: 25,
+    suffix: "+",
+    label: "Years Serving UAE Healthcare",
   },
   {
     id: 2,
-    icon: <GiThreeFriends size={40} className="text-primary" />,
-    value: "1720+",
-    label: "ACTIVE MEMBER",
+    icon: <FaHospitalUser className="text-primary" size={25} />,
+    value: 450,
+    suffix: "+",
+    label: "Government & Private Hospitals",
   },
   {
     id: 3,
-    icon: <FaGlobe size={40} className="text-primary" />,
-    value: "250+",
-    label: "EXPERT TEAM",
+    icon: <FaBoxesStacked className="text-primary" size={25} />,
+    value: 1200,
+    suffix: "+",
+    label: "Approved Medical Items",
+  },
+  {
+    id: 4,
+    icon: <FaCertificate className="text-primary" size={25} />,
+    value: 100,
+    suffix: "%",
+    label: "DHA & MOH Certified",
   },
 ];
 
+function Counter({ value, suffix, start = 0, duration = 1500 }) {
+  const [count, setCount] = useState(start);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!inView) return;
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setCount(Math.floor(progress * value));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, [inView, value, duration]);
+
+  return (
+    <span ref={ref} className="text-[38px] md:text-[42px] font-bold text-dark-2">
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
 export default function ProofSection() {
   return (
-    <section className="relative bg-white py-20 px-5 lg:px-42 xl:px-53 overflow-hidden">
+    <section className="relative bg-white py-20 px-5 overflow-hidden">
       {/* Heading */}
       <div className="text-center mb-14">
-        <motion.p
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-primary font-semibold text-sm uppercase tracking-wider mb-3"
-        >
-          Anyone can make promise
-        </motion.p>
-
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-dark-2 text-4xl md:text-5xl font-bold leading-tight"
-        >
-          We can give you proof
-        </motion.h2>
+        <p className="text-primary font-semibold text-sm uppercase tracking-wider">
+          We Are Trusted
+        </p>
+        <h2 className="text-dark-2 text-4xl md:text-5xl font-bold mt-2">
+          Why Healthcare Chooses Us
+        </h2>
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-16 max-w-6xl mx-auto text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 max-w-7xl mx-auto text-center">
         {stats.map((item, i) => (
           <motion.div
             key={item.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
-            className={`flex flex-col items-center justify-center space-y-3 ${
-              i !== stats.length - 1
-                ? "md:border-r border-gray-200 md:pr-6 lg:pr-10"
-                : ""
-            }`}
+            className="flex flex-col items-center gap-2"
           >
-            <div>{item.icon}</div>
-            <h3 className="text-3xl font-bold text-dark-2">{item.value}</h3>
-            <p className="text-gray-500 tracking-wider">{item.label}</p>
+            {/* Icon with dotted border ring */}
+            <div className="flex items-center justify-center w-14 h-14 rounded-2xl border-2 border-primary relative  mb-2">
+              {item.icon}
+            </div>
+
+            {/* Counter */}
+            <Counter value={item.value} suffix={item.suffix} />
+
+            {/* Label */}
+            <p className="text-gray-600 text-sm max-w-[160px] leading-snug mt-1">
+              {item.label}
+            </p>
           </motion.div>
         ))}
       </div>
-
-      {/* Decorative pattern (optional, consistent with theme)
-      <div className="absolute right-0 bottom-0 opacity-10 animate-bounce-smooth">
-        <img src="/demo-medical-pattern.svg" alt="pattern" />
-      </div> */}
     </section>
   );
 }

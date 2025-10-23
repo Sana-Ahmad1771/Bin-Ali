@@ -52,7 +52,7 @@ const WhoWeAre = () => {
             className="flex-1 flex justify-center"
           >
             <img
-              src="/team4.png"
+              src="/team4.jpg"
               alt="Bin Ali Medical"
               className="rounded-2xl shadow-lg w-full max-w-[650px] h-auto max-h-[400px] object-cover"
             />

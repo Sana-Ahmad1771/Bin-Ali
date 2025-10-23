@@ -5,25 +5,25 @@ import { FaHandshake, FaMicroscope, FaUsers, FaAward } from "react-icons/fa";
 
 const reasons = [
   {
-    icon: <FaHandshake className="text-white text-3xl" />,
+    icon: <FaHandshake className="text-primary text-3xl" />,
     title: "Trusted Partnerships",
     description:
       "We've built long-lasting relationships with leading global medical brands, ensuring reliable product quality and availability.",
   },
   {
-    icon: <FaMicroscope className="text-white text-3xl" />,
+    icon: <FaMicroscope className="text-primary text-3xl" />,
     title: "Cutting-Edge Technology",
     description:
       "We deploy advanced technologies and maintain strict quality standards to provide innovative healthcare solutions.",
   },
   {
-    icon: <FaUsers className="text-white text-3xl" />,
+    icon: <FaUsers className="text-primary text-3xl" />,
     title: "Dedicated Team",
     description:
       "Our team of experts ensures every client receives personalized service, fast response, and professional guidance.",
   },
   {
-    icon: <FaAward className="text-white text-3xl" />,
+    icon: <FaAward className="text-primary text-3xl" />,
     title: "Commitment to Excellence",
     description:
       "We strive to exceed expectations through continuous improvement and a deep commitment to ethical business practices.",
@@ -34,7 +34,10 @@ export default function WhyChooseUs() {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <section className="relative bg-primary/20 py-20 overflow-hidden">
+    <section className="relative bg-white py-20 overflow-hidden">
+      {/* overlay  */}
+      {/* <div className="absolute right-0 bottom-0 hidden md:block h-full bg-gradient-to-l from-primary/30 to-transparent w-[300px] sm:w-[450px] lg:w-[680px]"></div> */}
+
       <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24">
         {/* Header */}
         <div className="mx-auto mb-16 text-center lg:text-left">
@@ -109,7 +112,7 @@ export default function WhyChooseUs() {
                 {/* Inner content */}
                 <div className="relative z-20 bg-white rounded-2xl h-full flex flex-col items-center p-6 text-center">
                   {/* Fixed icon area */}
-                  <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-primary-light mb-6">
+                  <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-2xl border-2 border-primary  mb-6">
                     <motion.div
                       animate={{ rotate: hovered === index ? 360 : 0 }}
                       transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -120,7 +123,7 @@ export default function WhyChooseUs() {
 
                   {/* Title and text area */}
                   <div className="flex flex-col justify-start flex-grow">
-                    <div className="w-12 h-0.5 bg-primary/70 mb-4 mx-auto" />
+                    <div className="w-12 h-0.5 bg-primary mb-4 mx-auto" />
                     <h3 className="text-xl font-semibold mb-3 text-dark-2">
                       {item.title}
                     </h3>

@@ -1,6 +1,6 @@
 "use client";
 
-import productsbg from "../../../../../public/products-bg2.png";
+import productsbg from "../../../../../public/products-bg2.jpg";
 import { motion } from "framer-motion";
 import Link from "next/link";
 // import Image from "next/image";

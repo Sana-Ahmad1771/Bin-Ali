@@ -11,21 +11,21 @@ import Link from "next/link";
 const slides = [
   {
     id: 1,
-    image: "/heroimg-1.png",
+    image: "/heroimg-1.jpg",
     title: "One of the Leading Medical Suppliers in UAE",
     desc: "Being the leading supplier of healthcare products in the region, Bin Ali Medical Supplies LLC deals with an extensive range of high-value products for the benefit of our loyal customer base.",
     caption: "Better health through innovation",
   },
   {
     id: 2,
-    image: "/heroimg-2.png",
+    image: "/heroimg-2.jpg",
     title: "Trusted by Healthcare Professionals",
     desc: "We deliver products that meet global quality standards and empower the healthcare community to provide better patient outcomes.",
     caption: "Empowering healthcare excellence",
   },
   {
     id: 3,
-    image: "/heroimg-3.png",
+    image: "/heroimg-3.jpg",
     title: "Delivering Quality, Every Time",
     desc: "Our commitment to reliability and value ensures we remain the first choice for hospitals and clinics across the UAE.",
     caption: "Reliable medical solutions",

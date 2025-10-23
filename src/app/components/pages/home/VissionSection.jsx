@@ -110,7 +110,7 @@ export default function VisionSection() {
         />
       </div>
 
-      <div className="absolute left-0 bottom-0 hidden md:block h-full bg-gradient-to-r from-primary/30 to-transparent w-[300px] sm:w-[450px] lg:w-[600px]"></div>
+      {/* <div className="absolute left-0 bottom-0 hidden md:block h-full bg-gradient-to-r from-primary/30 to-transparent w-[300px] sm:w-[450px] lg:w-[600px]"></div> */}
       <div className="absolute right-0 bottom-0 hidden md:block h-full bg-gradient-to-l from-primary/30 to-transparent w-[300px] sm:w-[450px] lg:w-[680px]"></div>
 
       {/* Decorative Right Shape */}

@@ -1,6 +1,6 @@
 "use client";
 
-import contactbg from "../../../../../public/team6.png";
+import contactbg from "../../../../../public/team6.jpg";
 import { motion } from "framer-motion";
 import Link from "next/link";
 

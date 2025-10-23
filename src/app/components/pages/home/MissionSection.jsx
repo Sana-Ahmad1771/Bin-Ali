@@ -6,6 +6,9 @@ import { FaBullseye } from "react-icons/fa";
 export default function MissionSection() {
   return (
     <section className="relative bg-white py-20 overflow-hidden">
+      {/* overlay  */}
+      {/* <div className="absolute right-0 bottom-0 hidden md:block h-full bg-gradient-to-l from-primary/30 to-transparent w-[300px] sm:w-[450px] lg:w-[680px]"></div> */}
+
       {/* unified container width for all sections */}
       <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 flex flex-col lg:flex-row items-center gap-16">
         {/* Left Side - Text Content */}

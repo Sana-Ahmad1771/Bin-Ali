@@ -7,7 +7,7 @@ export default function Partnership() {
     <section
       className="relative py-20 bg-cover bg-center overflow-hidden"
       style={{
-        backgroundImage: "url('/heroimg-3.png')",
+        backgroundImage: "url('/heroimg-3.jpg')",
       }}
     >
       {/* Overlay */}

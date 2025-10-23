@@ -70,7 +70,6 @@ export default function OurProducts() {
               { title: "Metrex", img: "/metrex.png" },
               { title: "HerniaMesh", img: "/herniamesh.png" },
               { title: "Barray", img: "/barray.png" },
-              
             ].map((item, idx) => (
               <SwiperSlide key={idx}>
                 <motion.div
@@ -82,9 +81,9 @@ export default function OurProducts() {
                     <Image
                       src={item.img}
                       alt={item.title}
-                      width={260}
+                      width={160}
                       height={100}
-                      className="object-contain w-full h-auto"
+                      className="object-contain w-full h-full opacity-60 hover:opacity-100 transition duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                   <div className="mt-2 sm:mt-3">

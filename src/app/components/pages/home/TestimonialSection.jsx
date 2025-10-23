@@ -1,93 +1,141 @@
 "use client";
 import Image from "next/image";
-import aboutbg from "../../../../../public/team3.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, FreeMode } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import aboutbg from "../../../../../public/team3.jpg";
 
 const testimonials = [
   {
     id: 1,
     image: "/doctor.png",
-    text: "The medical supplies I ordered were delivered quickly and met all my expectations. Great service!",
-    name: "John D. Smith",
-    role: "Doctor",
+    text: "Bin Ali Healthcare has consistently delivered high-quality medical supplies with exceptional service and timely dispatch.",
+    name: "Burjeel Holdings",
+    role: "Healthcare Partner – UAE",
   },
   {
     id: 2,
-    image: "/doc-3.png",
-    text: "Excellent quality and reliable products. I always trust this company for my medical supplies.",
-    name: "Emma J. Lee",
-    role: "Nurse",
+    image: "/doc-2.png",
+    text: "Their compliance and documentation standards ensure smooth supply processes for government healthcare facilities.",
+    name: "Dubai Health Authority",
+    role: "Government Healthcare Sector – UAE",
   },
   {
     id: 3,
+    image: "/doc-3.png",
+    text: "Reliable procurement and great communication. We trust Bin Ali for our essential clinical requirements.",
+    name: "NMC Healthcare",
+    role: "Private Hospital Group – UAE",
+  },
+  {
+    id: 4,
     image: "/doctor-1.png",
-    text: "Great customer support and a user-friendly ordering process. Highly recommend this service!",
-    name: "Michael R. Taylor",
-    role: "Therapist",
+    text: "From ICU equipment to laboratory devices, Bin Ali’s solutions meet international quality standards and operational excellence.",
+    name: "Cleveland Clinic Abu Dhabi",
+    role: "Specialized Medical Center – UAE",
+  },
+  {
+    id: 5,
+    image: "/doc-3.png",
+    text: "Professional, transparent, and dependable — Bin Ali remains our preferred supplier for advanced medical technologies.",
+    name: "Sheikh Khalifa Medical City",
+    role: "Government Healthcare Facility – UAE",
   },
 ];
 
 export default function TestimonialSection() {
   return (
-    <section className="relative min-h-[800px] sm:min-h[1000px] pb-20 sm:pb-24 md:pb-42 lg:pb-32 ">
-     <div className="relative z-10"
-     style={{
-        backgroundImage: `url(${aboutbg.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-     >
-         {/* Overlay */}
-      <div className="absolute h-[800px] inset-0 bg-white/70 backdrop-blur-[2px]"></div>
-      {/* Main Content */}
-      <div className="relative bg-white p-4 sm:p-6 py-10 max-w-[1410px] mx-auto px-6 lg:px-16 xl:px-24 z-20 top-0 sm:top-24 md:top-40 lg:top-52 xl-top-70">
-        {/* Header */}
-        <div className="text-center mb-8 sm:mb-12 px-2">
-          <p className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3">
-            What Our Clients Think
-          </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-2 mt-2 px-4">
-            Feedback From Our Customers
-          </h2>
-        </div>
+    <section className="relative min-h-[800px] sm:min-h-[900px] pb-20 sm:pb-24 md:pb-42 lg:pb-32">
+      <div
+        className="relative z-10"
+        style={{
+          backgroundImage: `url(${aboutbg.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute h-[800px] inset-0 bg-white/70 backdrop-blur-[2px]"></div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-0">
-          {testimonials.map((item) => (
-            <div
-              key={item.id}
-              className="relative bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg duration-300 flex flex-col items-center text-center overflow-hidden w-full"
-            >
-              {/* Decorative Top Border Light */}
-              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-primary via-primary to-primary-light animate-borderGlow"></div>
+        {/* Main Content */}
+        <div className="relative bg-white rounded-lg p-4 sm:p-6 py-10 max-w-[1410px] mx-auto px-6 lg:px-16 xl:px-24 z-20 top-0 sm:top-24 md:top-40 lg:top-52">
+          {/* Header */}
+          <div className="text-center mb-8 sm:mb-12 px-2">
+            <p className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3">
+              What Our Clients Say
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-2 mt-2 px-4">
+              Trusted by Leading Healthcare Institutions
+            </h2>
+          </div>
 
-              <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-5">
-               <div className="bg-gradient-to-r p-1 from-primary-light via-primary to-primary-light animate-borderGlow">
-                 <Image
-                  src={item.image}
-                  alt="logo"
-                  width={70}
-                  height={70}
-                  className="object-contain w-12 h-12 sm:w-16 sm:h-16 md:w-14 md:h-20"
-                />
-               </div>
-              </div>
+          {/* Swiper Carousel */}
+          <Swiper
+             modules={[Autoplay, Pagination, FreeMode]}
+            freeMode={true}
+            loop={true}
+            grabCursor={true}
+            slidesPerView={1.2}
+            spaceBetween={25}
+            speed={2000}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="!px-4 sm:!px-0 testimonial-swiper"
+          >
+            {testimonials.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col justify-between items-center text-center w-full h-[370px] sm:h-[390px] md:h-[340px]">
+                  {/* Border Glow (restored) */}
+                  <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-primary)] to-[var(--color-primary-light)] animate-borderGlow"></div>
 
-              <p className="text-gray-600 text-xs sm:text-sm md:text-base mb-4 sm:mb-6 leading-relaxed max-w-full px-2">
-                “{item.text}”
-              </p>
+                  {/* Image */}
+                  <div className="flex items-center justify-center mb-4 sm:mb-6">
+                    <div className="bg-gradient-to-r from-[var(--color-primary-light)] via-[var(--color-primary)] to-[var(--color-primary-light)] p-[2px] rounded-xl">
+                      <div className="bg-white rounded-lg p-2 flex items-center justify-center">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          width={80}
+                          height={80}
+                          className="object-contain rounded-lg w-14 h-14 sm:w-16 sm:h-16 md:w-[70px] md:h-[70px]"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  {/* Text */}
+                  <p className="text-gray-600 text-sm md:text-base mb-6 leading-relaxed max-w-[90%] mx-auto flex-grow">
+                    “{item.text}”
+                  </p>
 
-              <div className="px-2">
-                <h4 className="font-semibold text-[#13171f] text-sm sm:text-base">{item.name}</h4>
-                <p className="text-gray-500 text-xs sm:text-sm">{item.role}</p>
-              </div>
-            </div>
-          ))}
+                  {/* Name / Role */}
+                  <div>
+                    <h4 className="font-semibold text-[#13171f] text-sm sm:text-base">
+                      {item.name}
+                    </h4>
+                    <p className="text-gray-500 text-xs sm:text-sm">
+                      {item.role}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
 
-     </div>
-      {/* Animation keyframes */}
-      <style jsx>{`
+      {/* Animations + Pagination */}
+      <style jsx global>{`
         @keyframes borderGlow {
           0% {
             background-position: 0% 50%;
@@ -100,6 +148,24 @@ export default function TestimonialSection() {
         .animate-borderGlow {
           background-size: 200% auto;
           animation: borderGlow 3s linear infinite;
+        }
+
+        /* Pagination styling */
+        .testimonial-swiper .swiper-pagination {
+          margin-top: 24px;
+          position: relative;
+        }
+        .testimonial-swiper .swiper-pagination-bullet {
+          background: #d1d5db;
+          opacity: 1;
+          width: 10px;
+          height: 10px;
+          margin: 0 6px !important;
+          transition: all 0.3s ease;
+        }
+        .testimonial-swiper .swiper-pagination-bullet-active {
+          background: #0077b6;
+          transform: scale(1.3);
         }
       `}</style>
     </section>

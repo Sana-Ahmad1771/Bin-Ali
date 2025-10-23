@@ -19,7 +19,7 @@ export default function NewsletterSection() {
     <section
       className="relative py-16 bg-cover bg-center overflow-hidden"
       style={{
-        backgroundImage: "url('/heroimg-3.png')",
+        backgroundImage: "url('/heroimg-3.jpg')",
       }}
     >
       {/* Overlay */}
