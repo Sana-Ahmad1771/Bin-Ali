@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+
 import {
   FaBuilding,
   FaCapsules,
@@ -30,10 +32,9 @@ const MegaMenu = ({ setIsMegaMenuOpen }) => {
       brands: [
         {
           name: "Safecare Medical Industries",
-          description:
-            "Surgical kits, PPE & medical consumables manufacturing",
+          description: "Surgical kits, PPE & medical consumables manufacturing",
           icon: FaBuilding,
-          href: "https://safecare-medical.com",
+          href: "https://safecare-ind.vercel.app/",
           color: "text-blue-600",
         },
         {
@@ -64,7 +65,7 @@ const MegaMenu = ({ setIsMegaMenuOpen }) => {
           href: "https://caremedical-trading.com",
           color: "text-purple-600",
         },
-         {
+        {
           name: "Safefast",
           description: "Medical logistics & delivery solutions",
           icon: FaBolt,
@@ -128,16 +129,15 @@ const MegaMenu = ({ setIsMegaMenuOpen }) => {
               style={{ top: "130px" }}
             >
               {/* Scrollable Container (hidden scrollbar) */}
-              <div
-                className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 py-10 overflow-y-auto max-h-[80vh] hide-scrollbar"
-              >
+              <div className="max-w-[1600px] mx-auto px-6 lg:px-16 xl:px-24 py-10 overflow-y-auto max-h-[80vh] hide-scrollbar">
                 {/* Header */}
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-dark-2 mb-2">
                     Our Manufacturing Ecosystem
                   </h3>
                   <p className="text-gray-600">
-                    Six specialized companies united in medical manufacturing excellence
+                    Six specialized companies united in medical manufacturing
+                    excellence
                   </p>
                 </div>
 
@@ -164,6 +164,8 @@ const MegaMenu = ({ setIsMegaMenuOpen }) => {
                           <motion.a
                             key={j}
                             href={brand.href}
+                            target="_blank" // opens link in new tab
+                            rel="noopener noreferrer" // security best practice
                             className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200 group"
                             whileHover={{ x: 5 }}
                             onClick={() => {
@@ -201,18 +203,20 @@ const MegaMenu = ({ setIsMegaMenuOpen }) => {
                     <p className="text-gray-600 text-sm">
                       Looking for a specific product or service?
                     </p>
-                    <button
-                      className="bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto text-sm sm:text-base text-center"
-                      onClick={() => {
-                        setOpen(false);
-                        setIsMegaMenuOpen(false);
-                        document
-                          .getElementById("contact")
-                          ?.scrollIntoView({ behavior: "smooth" });
-                      }}
-                    >
-                      Contact Our Team
-                    </button>
+                    <Link href="/contact">
+                      <button
+                        className="bg-gradient-to-r from-primary to-primary-light text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto text-sm sm:text-base text-center"
+                        onClick={() => {
+                          setOpen(false);
+                          setIsMegaMenuOpen(false);
+                          document
+                            .getElementById("contact")
+                            ?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                      >
+                        Contact Our Team
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
